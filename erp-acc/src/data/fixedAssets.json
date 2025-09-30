@@ -1,0 +1,387 @@
+[
+    {
+        "assetCode": "FA-001",
+        "assetName": "Laser Hair Removal Machine",
+        "category": "Medical Equipment",
+        "subCategory": "Laser Equipment",
+        "location": "Klinik A - Treatment Room 1",
+        "custodian": "dr. Citra",
+        "branch": "Klinik A",
+        "acquisition": {
+            "purchaseDate": "2024-01-15",
+            "purchaseValue": 150000000,
+            "vendor": "PT Laser Prima",
+            "vendorId": "VEND-001",
+            "purchaseOrder": "PO-2024-001",
+            "invoiceNumber": "INV-LP-001",
+            "warrantyPeriod": 24,
+            "warrantyExpiry": "2026-01-15"
+        },
+        "depreciation": {
+            "method": "straight_line",
+            "usefulLife": 60,
+            "residualValue": 15000000,
+            "depreciableAmount": 135000000,
+            "monthlyDepreciation": 1875000,
+            "accumulatedDepreciation": 33750000,
+            "bookValue": 116250000,
+            "depreciationStartDate": "2024-02-01",
+            "lastDepreciationDate": "2025-09-01"
+        },
+        "financial": {
+            "costCenter": "CC-TREATMENT",
+            "glAccount": "1-200",
+            "accumulatedDepreciationAccount": "1-201",
+            "depreciationExpenseAccount": "6-100",
+            "isCapitalized": true,
+            "capitalizationDate": "2024-01-15",
+            "capitalizationJournal": "JV-2024-001"
+        },
+        "status": {
+            "current": "active",
+            "condition": "good",
+            "lastMaintenance": "2025-08-15",
+            "nextMaintenance": "2025-11-15",
+            "maintenanceInterval": 90,
+            "isDisposed": false,
+            "disposalDate": null,
+            "disposalValue": null
+        },
+        "workflow": {
+            "createdBy": "user001",
+            "createdAt": "2024-01-15T10:00:00Z",
+            "approvedBy": "manager001",
+            "approvedAt": "2024-01-15T14:30:00Z",
+            "lastUpdatedBy": "user002",
+            "lastUpdatedAt": "2025-09-01T09:00:00Z"
+        },
+        "audit": {
+            "version": 3,
+            "changes": [
+                {
+                    "timestamp": "2025-09-01T09:00:00Z",
+                    "user": "user002",
+                    "action": "depreciation_calculated",
+                    "changes": {
+                        "accumulatedDepreciation": {
+                            "from": 31875000,
+                            "to": 33750000
+                        },
+                        "bookValue": {
+                            "from": 118125000,
+                            "to": 116250000
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "assetCode": "FA-002",
+        "assetName": "Hydrafacial Machine",
+        "category": "Medical Equipment",
+        "subCategory": "Facial Equipment",
+        "location": "Klinik A - Treatment Room 2",
+        "custodian": "dr. Maya",
+        "branch": "Klinik A",
+        "acquisition": {
+            "purchaseDate": "2024-03-10",
+            "purchaseValue": 85000000,
+            "vendor": "PT Beauty Tech",
+            "vendorId": "VEND-002",
+            "purchaseOrder": "PO-2024-015",
+            "invoiceNumber": "INV-BT-002",
+            "warrantyPeriod": 36,
+            "warrantyExpiry": "2027-03-10"
+        },
+        "depreciation": {
+            "method": "straight_line",
+            "usefulLife": 48,
+            "residualValue": 8500000,
+            "depreciableAmount": 76500000,
+            "monthlyDepreciation": 1593750,
+            "accumulatedDepreciation": 28687500,
+            "bookValue": 56312500,
+            "depreciationStartDate": "2024-04-01",
+            "lastDepreciationDate": "2025-09-01"
+        },
+        "financial": {
+            "costCenter": "CC-TREATMENT",
+            "glAccount": "1-200",
+            "accumulatedDepreciationAccount": "1-201",
+            "depreciationExpenseAccount": "6-100",
+            "isCapitalized": true,
+            "capitalizationDate": "2024-03-10",
+            "capitalizationJournal": "JV-2024-045"
+        },
+        "status": {
+            "current": "active",
+            "condition": "excellent",
+            "lastMaintenance": "2025-07-20",
+            "nextMaintenance": "2025-10-20",
+            "maintenanceInterval": 90,
+            "isDisposed": false,
+            "disposalDate": null,
+            "disposalValue": null
+        },
+        "workflow": {
+            "createdBy": "user001",
+            "createdAt": "2024-03-10T11:00:00Z",
+            "approvedBy": "manager001",
+            "approvedAt": "2024-03-10T15:00:00Z",
+            "lastUpdatedBy": "user002",
+            "lastUpdatedAt": "2025-09-01T09:00:00Z"
+        },
+        "audit": {
+            "version": 2,
+            "changes": [
+                {
+                    "timestamp": "2025-09-01T09:00:00Z",
+                    "user": "user002",
+                    "action": "depreciation_calculated",
+                    "changes": {
+                        "accumulatedDepreciation": {
+                            "from": 27093750,
+                            "to": 28687500
+                        },
+                        "bookValue": {
+                            "from": 57906250,
+                            "to": 56312500
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "assetCode": "FA-003",
+        "assetName": "Office Computer Set",
+        "category": "IT Equipment",
+        "subCategory": "Computer",
+        "location": "Klinik A - Reception",
+        "custodian": "Admin Reception",
+        "branch": "Klinik A",
+        "acquisition": {
+            "purchaseDate": "2024-06-01",
+            "purchaseValue": 15000000,
+            "vendor": "PT Computer Plus",
+            "vendorId": "VEND-003",
+            "purchaseOrder": "PO-2024-032",
+            "invoiceNumber": "INV-CP-003",
+            "warrantyPeriod": 12,
+            "warrantyExpiry": "2025-06-01"
+        },
+        "depreciation": {
+            "method": "straight_line",
+            "usefulLife": 36,
+            "residualValue": 1500000,
+            "depreciableAmount": 13500000,
+            "monthlyDepreciation": 375000,
+            "accumulatedDepreciation": 4500000,
+            "bookValue": 10500000,
+            "depreciationStartDate": "2024-07-01",
+            "lastDepreciationDate": "2025-09-01"
+        },
+        "financial": {
+            "costCenter": "CC-ADMIN",
+            "glAccount": "1-200",
+            "accumulatedDepreciationAccount": "1-201",
+            "depreciationExpenseAccount": "6-100",
+            "isCapitalized": true,
+            "capitalizationDate": "2024-06-01",
+            "capitalizationJournal": "JV-2024-089"
+        },
+        "status": {
+            "current": "active",
+            "condition": "good",
+            "lastMaintenance": "2025-08-01",
+            "nextMaintenance": "2025-11-01",
+            "maintenanceInterval": 90,
+            "isDisposed": false,
+            "disposalDate": null,
+            "disposalValue": null
+        },
+        "workflow": {
+            "createdBy": "user001",
+            "createdAt": "2024-06-01T09:00:00Z",
+            "approvedBy": "manager001",
+            "approvedAt": "2024-06-01T13:00:00Z",
+            "lastUpdatedBy": "user002",
+            "lastUpdatedAt": "2025-09-01T09:00:00Z"
+        },
+        "audit": {
+            "version": 2,
+            "changes": [
+                {
+                    "timestamp": "2025-09-01T09:00:00Z",
+                    "user": "user002",
+                    "action": "depreciation_calculated",
+                    "changes": {
+                        "accumulatedDepreciation": {
+                            "from": 4125000,
+                            "to": 4500000
+                        },
+                        "bookValue": {
+                            "from": 10875000,
+                            "to": 10500000
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "assetCode": "FA-004",
+        "assetName": "Air Conditioning Unit",
+        "category": "Building Equipment",
+        "subCategory": "HVAC",
+        "location": "Klinik B - Treatment Room 1",
+        "custodian": "Facility Manager",
+        "branch": "Klinik B",
+        "acquisition": {
+            "purchaseDate": "2024-02-20",
+            "purchaseValue": 25000000,
+            "vendor": "PT AC Sejuk",
+            "vendorId": "VEND-004",
+            "purchaseOrder": "PO-2024-008",
+            "invoiceNumber": "INV-ACS-004",
+            "warrantyPeriod": 24,
+            "warrantyExpiry": "2026-02-20"
+        },
+        "depreciation": {
+            "method": "straight_line",
+            "usefulLife": 120,
+            "residualValue": 2500000,
+            "depreciableAmount": 22500000,
+            "monthlyDepreciation": 187500,
+            "accumulatedDepreciation": 3375000,
+            "bookValue": 21625000,
+            "depreciationStartDate": "2024-03-01",
+            "lastDepreciationDate": "2025-09-01"
+        },
+        "financial": {
+            "costCenter": "CC-FACILITY",
+            "glAccount": "1-200",
+            "accumulatedDepreciationAccount": "1-201",
+            "depreciationExpenseAccount": "6-100",
+            "isCapitalized": true,
+            "capitalizationDate": "2024-02-20",
+            "capitalizationJournal": "JV-2024-025"
+        },
+        "status": {
+            "current": "active",
+            "condition": "good",
+            "lastMaintenance": "2025-08-10",
+            "nextMaintenance": "2025-11-10",
+            "maintenanceInterval": 90,
+            "isDisposed": false,
+            "disposalDate": null,
+            "disposalValue": null
+        },
+        "workflow": {
+            "createdBy": "user001",
+            "createdAt": "2024-02-20T10:00:00Z",
+            "approvedBy": "manager001",
+            "approvedAt": "2024-02-20T14:00:00Z",
+            "lastUpdatedBy": "user002",
+            "lastUpdatedAt": "2025-09-01T09:00:00Z"
+        },
+        "audit": {
+            "version": 2,
+            "changes": [
+                {
+                    "timestamp": "2025-09-01T09:00:00Z",
+                    "user": "user002",
+                    "action": "depreciation_calculated",
+                    "changes": {
+                        "accumulatedDepreciation": {
+                            "from": 3187500,
+                            "to": 3375000
+                        },
+                        "bookValue": {
+                            "from": 21812500,
+                            "to": 21625000
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "assetCode": "FA-005",
+        "assetName": "Furniture Set - Reception",
+        "category": "Furniture & Fixtures",
+        "subCategory": "Office Furniture",
+        "location": "Klinik B - Reception",
+        "custodian": "Admin Reception",
+        "branch": "Klinik B",
+        "acquisition": {
+            "purchaseDate": "2024-04-15",
+            "purchaseValue": 12000000,
+            "vendor": "PT Furniture Indah",
+            "vendorId": "VEND-005",
+            "purchaseOrder": "PO-2024-020",
+            "invoiceNumber": "INV-FI-005",
+            "warrantyPeriod": 12,
+            "warrantyExpiry": "2025-04-15"
+        },
+        "depreciation": {
+            "method": "straight_line",
+            "usefulLife": 60,
+            "residualValue": 1200000,
+            "depreciableAmount": 10800000,
+            "monthlyDepreciation": 180000,
+            "accumulatedDepreciation": 2700000,
+            "bookValue": 9300000,
+            "depreciationStartDate": "2024-05-01",
+            "lastDepreciationDate": "2025-09-01"
+        },
+        "financial": {
+            "costCenter": "CC-ADMIN",
+            "glAccount": "1-200",
+            "accumulatedDepreciationAccount": "1-201",
+            "depreciationExpenseAccount": "6-100",
+            "isCapitalized": true,
+            "capitalizationDate": "2024-04-15",
+            "capitalizationJournal": "JV-2024-055"
+        },
+        "status": {
+            "current": "active",
+            "condition": "good",
+            "lastMaintenance": "2025-07-15",
+            "nextMaintenance": "2025-10-15",
+            "maintenanceInterval": 90,
+            "isDisposed": false,
+            "disposalDate": null,
+            "disposalValue": null
+        },
+        "workflow": {
+            "createdBy": "user001",
+            "createdAt": "2024-04-15T11:00:00Z",
+            "approvedBy": "manager001",
+            "approvedAt": "2024-04-15T15:00:00Z",
+            "lastUpdatedBy": "user002",
+            "lastUpdatedAt": "2025-09-01T09:00:00Z"
+        },
+        "audit": {
+            "version": 2,
+            "changes": [
+                {
+                    "timestamp": "2025-09-01T09:00:00Z",
+                    "user": "user002",
+                    "action": "depreciation_calculated",
+                    "changes": {
+                        "accumulatedDepreciation": {
+                            "from": 2520000,
+                            "to": 2700000
+                        },
+                        "bookValue": {
+                            "from": 9480000,
+                            "to": 9300000
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

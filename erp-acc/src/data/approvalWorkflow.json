@@ -1,0 +1,321 @@
+[
+    {
+        "id": "APP-2025-001",
+        "documentType": "invoice",
+        "documentNumber": "INV-1002",
+        "documentDate": "2025-09-02",
+        "amount": 5495000,
+        "currency": "IDR",
+        "requester": "user001",
+        "requesterName": "dr. Citra",
+        "department": "Treatment",
+        "branch": "Klinik A",
+        "description": "Invoice Chemical Peel untuk Gita Prameswari",
+        "priority": "normal",
+        "status": "pending",
+        "currentLevel": 1,
+        "totalLevels": 2,
+        "approvalFlow": [
+            {
+                "level": 1,
+                "approver": "manager001",
+                "approverName": "Manager Klinik A",
+                "role": "Branch Manager",
+                "threshold": 5000000,
+                "status": "pending",
+                "assignedAt": "2025-09-02T10:00:00Z",
+                "dueDate": "2025-09-04T10:00:00Z",
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            },
+            {
+                "level": 2,
+                "approver": "finance001",
+                "approverName": "Finance Manager",
+                "role": "Finance Manager",
+                "threshold": 10000000,
+                "status": "pending",
+                "assignedAt": null,
+                "dueDate": null,
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            }
+        ],
+        "attachments": [
+            {
+                "filename": "invoice_inv-1002.pdf",
+                "path": "/uploads/approvals/inv-1002.pdf",
+                "uploadedAt": "2025-09-02T10:00:00Z"
+            }
+        ],
+        "createdAt": "2025-09-02T10:00:00Z",
+        "updatedAt": "2025-09-02T10:00:00Z",
+        "completedAt": null
+    },
+    {
+        "id": "APP-2025-002",
+        "documentType": "bill",
+        "documentNumber": "BILL-3001",
+        "documentDate": "2025-09-01",
+        "amount": 10120000,
+        "currency": "IDR",
+        "requester": "user002",
+        "requesterName": "Procurement Team",
+        "department": "Procurement",
+        "branch": "Klinik A",
+        "description": "Bill pembelian bahan treatment dari PT Sumber Abadi",
+        "priority": "high",
+        "status": "approved",
+        "currentLevel": 2,
+        "totalLevels": 2,
+        "approvalFlow": [
+            {
+                "level": 1,
+                "approver": "manager001",
+                "approverName": "Manager Klinik A",
+                "role": "Branch Manager",
+                "threshold": 5000000,
+                "status": "approved",
+                "assignedAt": "2025-09-01T09:00:00Z",
+                "dueDate": "2025-09-03T09:00:00Z",
+                "approvedAt": "2025-09-01T14:30:00Z",
+                "approvedBy": "manager001",
+                "comments": "Approved - sesuai budget procurement",
+                "isRequired": true
+            },
+            {
+                "level": 2,
+                "approver": "finance001",
+                "approverName": "Finance Manager",
+                "role": "Finance Manager",
+                "threshold": 10000000,
+                "status": "approved",
+                "assignedAt": "2025-09-01T14:30:00Z",
+                "dueDate": "2025-09-03T14:30:00Z",
+                "approvedAt": "2025-09-02T10:15:00Z",
+                "approvedBy": "finance001",
+                "comments": "Approved - vendor terpercaya, harga kompetitif",
+                "isRequired": true
+            }
+        ],
+        "attachments": [
+            {
+                "filename": "bill_bill-3001.pdf",
+                "path": "/uploads/approvals/bill-3001.pdf",
+                "uploadedAt": "2025-09-01T09:00:00Z"
+            },
+            {
+                "filename": "quotation_sumber-abadi.pdf",
+                "path": "/uploads/approvals/quotation-sumber-abadi.pdf",
+                "uploadedAt": "2025-09-01T09:00:00Z"
+            }
+        ],
+        "createdAt": "2025-09-01T09:00:00Z",
+        "updatedAt": "2025-09-02T10:15:00Z",
+        "completedAt": "2025-09-02T10:15:00Z"
+    },
+    {
+        "id": "APP-2025-003",
+        "documentType": "payment",
+        "documentNumber": "PAY-2025-001",
+        "documentDate": "2025-09-15",
+        "amount": 25000000,
+        "currency": "IDR",
+        "requester": "user003",
+        "requesterName": "Finance Team",
+        "department": "Finance",
+        "branch": "Klinik A",
+        "description": "Payment voucher untuk pembayaran gaji bulan September",
+        "priority": "urgent",
+        "status": "pending",
+        "currentLevel": 1,
+        "totalLevels": 3,
+        "approvalFlow": [
+            {
+                "level": 1,
+                "approver": "hr001",
+                "approverName": "HR Manager",
+                "role": "HR Manager",
+                "threshold": 10000000,
+                "status": "pending",
+                "assignedAt": "2025-09-15T08:00:00Z",
+                "dueDate": "2025-09-16T08:00:00Z",
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            },
+            {
+                "level": 2,
+                "approver": "finance001",
+                "approverName": "Finance Manager",
+                "role": "Finance Manager",
+                "threshold": 20000000,
+                "status": "pending",
+                "assignedAt": null,
+                "dueDate": null,
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            },
+            {
+                "level": 3,
+                "approver": "ceo001",
+                "approverName": "CEO",
+                "role": "CEO",
+                "threshold": 50000000,
+                "status": "pending",
+                "assignedAt": null,
+                "dueDate": null,
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            }
+        ],
+        "attachments": [
+            {
+                "filename": "payroll_september_2025.xlsx",
+                "path": "/uploads/approvals/payroll-september-2025.xlsx",
+                "uploadedAt": "2025-09-15T08:00:00Z"
+            },
+            {
+                "filename": "bank_transfer_form.pdf",
+                "path": "/uploads/approvals/bank-transfer-form.pdf",
+                "uploadedAt": "2025-09-15T08:00:00Z"
+            }
+        ],
+        "createdAt": "2025-09-15T08:00:00Z",
+        "updatedAt": "2025-09-15T08:00:00Z",
+        "completedAt": null
+    },
+    {
+        "id": "APP-2025-004",
+        "documentType": "expense",
+        "documentNumber": "EXP-2025-001",
+        "documentDate": "2025-09-10",
+        "amount": 3500000,
+        "currency": "IDR",
+        "requester": "user004",
+        "requesterName": "Marketing Team",
+        "department": "Marketing",
+        "branch": "Klinik A",
+        "description": "Biaya iklan Google Ads untuk campaign bulan September",
+        "priority": "normal",
+        "status": "rejected",
+        "currentLevel": 1,
+        "totalLevels": 2,
+        "approvalFlow": [
+            {
+                "level": 1,
+                "approver": "manager001",
+                "approverName": "Manager Klinik A",
+                "role": "Branch Manager",
+                "threshold": 5000000,
+                "status": "rejected",
+                "assignedAt": "2025-09-10T11:00:00Z",
+                "dueDate": "2025-09-12T11:00:00Z",
+                "approvedAt": "2025-09-11T15:30:00Z",
+                "approvedBy": "manager001",
+                "comments": "Rejected - budget marketing sudah habis untuk bulan ini. Silakan ajukan untuk bulan Oktober.",
+                "isRequired": true
+            },
+            {
+                "level": 2,
+                "approver": "finance001",
+                "approverName": "Finance Manager",
+                "role": "Finance Manager",
+                "threshold": 10000000,
+                "status": "cancelled",
+                "assignedAt": null,
+                "dueDate": null,
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            }
+        ],
+        "attachments": [
+            {
+                "filename": "google_ads_proposal.pdf",
+                "path": "/uploads/approvals/google-ads-proposal.pdf",
+                "uploadedAt": "2025-09-10T11:00:00Z"
+            },
+            {
+                "filename": "marketing_budget_sept.xlsx",
+                "path": "/uploads/approvals/marketing-budget-sept.xlsx",
+                "uploadedAt": "2025-09-10T11:00:00Z"
+            }
+        ],
+        "createdAt": "2025-09-10T11:00:00Z",
+        "updatedAt": "2025-09-11T15:30:00Z",
+        "completedAt": "2025-09-11T15:30:00Z"
+    },
+    {
+        "id": "APP-2025-005",
+        "documentType": "purchase_order",
+        "documentNumber": "PO-2025-001",
+        "documentDate": "2025-09-12",
+        "amount": 15000000,
+        "currency": "IDR",
+        "requester": "user005",
+        "requesterName": "IT Team",
+        "department": "IT",
+        "branch": "Klinik A",
+        "description": "Purchase Order untuk upgrade server dan backup system",
+        "priority": "high",
+        "status": "in_progress",
+        "currentLevel": 2,
+        "totalLevels": 2,
+        "approvalFlow": [
+            {
+                "level": 1,
+                "approver": "manager001",
+                "approverName": "Manager Klinik A",
+                "role": "Branch Manager",
+                "threshold": 5000000,
+                "status": "approved",
+                "assignedAt": "2025-09-12T09:00:00Z",
+                "dueDate": "2025-09-14T09:00:00Z",
+                "approvedAt": "2025-09-12T16:45:00Z",
+                "approvedBy": "manager001",
+                "comments": "Approved - diperlukan untuk keamanan data",
+                "isRequired": true
+            },
+            {
+                "level": 2,
+                "approver": "finance001",
+                "approverName": "Finance Manager",
+                "role": "Finance Manager",
+                "threshold": 10000000,
+                "status": "pending",
+                "assignedAt": "2025-09-12T16:45:00Z",
+                "dueDate": "2025-09-14T16:45:00Z",
+                "approvedAt": null,
+                "approvedBy": null,
+                "comments": null,
+                "isRequired": true
+            }
+        ],
+        "attachments": [
+            {
+                "filename": "server_specification.pdf",
+                "path": "/uploads/approvals/server-specification.pdf",
+                "uploadedAt": "2025-09-12T09:00:00Z"
+            },
+            {
+                "filename": "vendor_quotation_it.pdf",
+                "path": "/uploads/approvals/vendor-quotation-it.pdf",
+                "uploadedAt": "2025-09-12T09:00:00Z"
+            }
+        ],
+        "createdAt": "2025-09-12T09:00:00Z",
+        "updatedAt": "2025-09-12T16:45:00Z",
+        "completedAt": null
+    }
+]

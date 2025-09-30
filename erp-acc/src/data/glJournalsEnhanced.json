@@ -1,0 +1,376 @@
+// Enhanced GL Journals dengan auto-posting integration
+// Data ini akan terintegrasi dengan GL Posting Service
+[
+    {
+        "id": "journal-001",
+        "number": "JV-2025-001",
+        "date": "2025-09-01",
+        "description": "Invoice posting: INV-1001",
+        "sourceDocument": "invoice",
+        "sourceNumber": "INV-1001",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-TREATMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-001",
+                "account": "1-100",
+                "accountName": "Accounts Receivable",
+                "debit": 1650000,
+                "credit": 0,
+                "description": "Invoice INV-1001 - Ayu Lestari",
+                "reference": "INV-1001",
+                "journalNumber": "JV-2025-001",
+                "postedAt": "2025-09-01T10:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-002",
+                "account": "4-100",
+                "accountName": "Service Revenue",
+                "debit": 0,
+                "credit": 1500000,
+                "description": "Revenue from Ayu Lestari",
+                "reference": "INV-1001",
+                "journalNumber": "JV-2025-001",
+                "postedAt": "2025-09-01T10:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-003",
+                "account": "2-100",
+                "accountName": "Tax Payable",
+                "debit": 0,
+                "credit": 150000,
+                "description": "Tax from invoice INV-1001",
+                "reference": "INV-1001",
+                "journalNumber": "JV-2025-001",
+                "postedAt": "2025-09-01T10:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-01T10:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-01T10:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-002",
+        "number": "JV-2025-002",
+        "date": "2025-09-02",
+        "description": "Receipt posting: RC-2001",
+        "sourceDocument": "receipt",
+        "sourceNumber": "RC-2001",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-TREATMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-004",
+                "account": "1-000",
+                "accountName": "Cash",
+                "debit": 1650000,
+                "credit": 0,
+                "description": "Receipt RC-2001 - Ayu Lestari",
+                "reference": "RC-2001",
+                "journalNumber": "JV-2025-002",
+                "postedAt": "2025-09-02T09:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-005",
+                "account": "1-100",
+                "accountName": "Accounts Receivable",
+                "debit": 0,
+                "credit": 1650000,
+                "description": "Payment from Ayu Lestari",
+                "reference": "RC-2001",
+                "journalNumber": "JV-2025-002",
+                "postedAt": "2025-09-02T09:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-02T09:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-02T09:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-003",
+        "number": "JV-2025-003",
+        "date": "2025-09-01",
+        "description": "Bill posting: BILL-3001",
+        "sourceDocument": "bill",
+        "sourceNumber": "BILL-3001",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-PROCUREMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-006",
+                "account": "6-100",
+                "accountName": "Treatment Supplies Expense",
+                "debit": 9200000,
+                "credit": 0,
+                "description": "Bill BILL-3001 - PT Sumber Abadi",
+                "reference": "BILL-3001",
+                "journalNumber": "JV-2025-003",
+                "postedAt": "2025-09-01T11:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-007",
+                "account": "2-200",
+                "accountName": "Accounts Payable",
+                "debit": 0,
+                "credit": 10120000,
+                "description": "Payable to PT Sumber Abadi",
+                "reference": "BILL-3001",
+                "journalNumber": "JV-2025-003",
+                "postedAt": "2025-09-01T11:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-008",
+                "account": "1-300",
+                "accountName": "Tax Receivable",
+                "debit": 920000,
+                "credit": 0,
+                "description": "Tax from bill BILL-3001",
+                "reference": "BILL-3001",
+                "journalNumber": "JV-2025-003",
+                "postedAt": "2025-09-01T11:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-01T11:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-01T11:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-004",
+        "number": "JV-2025-004",
+        "date": "2025-09-15",
+        "description": "Payment posting: PAY-2025-001",
+        "sourceDocument": "payment",
+        "sourceNumber": "PAY-2025-001",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-PROCUREMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-009",
+                "account": "2-200",
+                "accountName": "Accounts Payable",
+                "debit": 10120000,
+                "credit": 0,
+                "description": "Payment PAY-2025-001 - PT Sumber Abadi",
+                "reference": "PAY-2025-001",
+                "journalNumber": "JV-2025-004",
+                "postedAt": "2025-09-15T14:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-010",
+                "account": "1-000",
+                "accountName": "Bank Account",
+                "debit": 0,
+                "credit": 10120000,
+                "description": "Payment to PT Sumber Abadi",
+                "reference": "PAY-2025-001",
+                "journalNumber": "JV-2025-004",
+                "postedAt": "2025-09-15T14:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-15T14:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-15T14:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-005",
+        "number": "JV-2025-005",
+        "date": "2025-09-01",
+        "description": "Depreciation posting: FA-001",
+        "sourceDocument": "depreciation",
+        "sourceNumber": "FA-001",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-FACILITY",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-011",
+                "account": "6-100",
+                "accountName": "Depreciation Expense",
+                "debit": 1875000,
+                "credit": 0,
+                "description": "Depreciation FA-001 - Laser Hair Removal Machine",
+                "reference": "FA-001",
+                "journalNumber": "JV-2025-005",
+                "postedAt": "2025-09-01T09:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-012",
+                "account": "1-201",
+                "accountName": "Accumulated Depreciation",
+                "debit": 0,
+                "credit": 1875000,
+                "description": "Accumulated Depreciation FA-001",
+                "reference": "FA-001",
+                "journalNumber": "JV-2025-005",
+                "postedAt": "2025-09-01T09:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-01T09:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-01T09:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-006",
+        "number": "JV-2025-006",
+        "date": "2025-09-01",
+        "description": "Manual journal entry",
+        "sourceDocument": "journal",
+        "sourceNumber": "JV-2025-006",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-ADMIN",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-013",
+                "account": "6-200",
+                "accountName": "Office Supplies Expense",
+                "debit": 500000,
+                "credit": 0,
+                "description": "Pembelian alat tulis kantor",
+                "reference": "JV-2025-006",
+                "journalNumber": "JV-2025-006",
+                "postedAt": "2025-09-01T16:00:00Z",
+                "postedBy": "user001"
+            },
+            {
+                "id": "entry-014",
+                "account": "1-000",
+                "accountName": "Cash",
+                "debit": 0,
+                "credit": 500000,
+                "description": "Pembayaran alat tulis kantor",
+                "reference": "JV-2025-006",
+                "journalNumber": "JV-2025-006",
+                "postedAt": "2025-09-01T16:00:00Z",
+                "postedBy": "user001"
+            }
+        ],
+        "createdAt": "2025-09-01T16:00:00Z",
+        "createdBy": "user001",
+        "updatedAt": "2025-09-01T16:00:00Z",
+        "updatedBy": "user001"
+    },
+    {
+        "id": "journal-007",
+        "number": "JV-2025-007",
+        "date": "2025-09-02",
+        "description": "Invoice posting: INV-1002",
+        "sourceDocument": "invoice",
+        "sourceNumber": "INV-1002",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-TREATMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-015",
+                "account": "1-100",
+                "accountName": "Accounts Receivable",
+                "debit": 5495000,
+                "credit": 0,
+                "description": "Invoice INV-1002 - Gita Prameswari",
+                "reference": "INV-1002",
+                "journalNumber": "JV-2025-007",
+                "postedAt": "2025-09-02T10:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-016",
+                "account": "4-100",
+                "accountName": "Service Revenue",
+                "debit": 0,
+                "credit": 4995000,
+                "description": "Revenue from Gita Prameswari",
+                "reference": "INV-1002",
+                "journalNumber": "JV-2025-007",
+                "postedAt": "2025-09-02T10:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-017",
+                "account": "2-100",
+                "accountName": "Tax Payable",
+                "debit": 0,
+                "credit": 500000,
+                "description": "Tax from invoice INV-1002",
+                "reference": "INV-1002",
+                "journalNumber": "JV-2025-007",
+                "postedAt": "2025-09-02T10:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-02T10:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-02T10:00:00Z",
+        "updatedBy": "system"
+    },
+    {
+        "id": "journal-008",
+        "number": "JV-2025-008",
+        "date": "2025-09-02",
+        "description": "Receipt posting: RC-2002",
+        "sourceDocument": "receipt",
+        "sourceNumber": "RC-2002",
+        "status": "posted",
+        "branch": "Klinik A",
+        "costCenter": "CC-TREATMENT",
+        "project": null,
+        "entries": [
+            {
+                "id": "entry-018",
+                "account": "1-000",
+                "accountName": "Cash",
+                "debit": 3495000,
+                "credit": 0,
+                "description": "Receipt RC-2002 - Gita Prameswari",
+                "reference": "RC-2002",
+                "journalNumber": "JV-2025-008",
+                "postedAt": "2025-09-02T11:00:00Z",
+                "postedBy": "system"
+            },
+            {
+                "id": "entry-019",
+                "account": "1-100",
+                "accountName": "Accounts Receivable",
+                "debit": 0,
+                "credit": 3495000,
+                "description": "Payment from Gita Prameswari",
+                "reference": "RC-2002",
+                "journalNumber": "JV-2025-008",
+                "postedAt": "2025-09-02T11:00:00Z",
+                "postedBy": "system"
+            }
+        ],
+        "createdAt": "2025-09-02T11:00:00Z",
+        "createdBy": "system",
+        "updatedAt": "2025-09-02T11:00:00Z",
+        "updatedBy": "system"
+    }
+]
