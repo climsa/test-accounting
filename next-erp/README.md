@@ -26,6 +26,8 @@ Mock-up ERP akuntansi berdasarkan matrix menu pada gambar. Versi ini disesuaikan
 - Semua data adalah dummy, form dalam keadaan disabled (mock). Tidak ada backend/persistensi.
 - Struktur menu mencakup: General Ledger, Sales (AR), Purchases (AP), Banking & Cash, Petty Cash, Inventory Hooks, Tax & Compliance, Dimensions & Analytics, Masters & Settings.
 - Anda dapat menambah/ubah kolom tabel atau field form di `src/data/menu.tsx`.
+- Setiap modul menampilkan tabel utama; form dibuka lewat tombol "Buka Form" yang memunculkan modal.
+- Tiap baris tabel memiliki aksi dummy (Lihat/Edit/Hapus) untuk menggambarkan workflow namun masih disabled.
 
 ## Kustomisasi Cepat
 
