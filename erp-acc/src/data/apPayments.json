@@ -1,0 +1,15 @@
+[
+  { "payment": "PV-4001", "date": "2025-09-08", "vendor": "PT Listrik Nusantara", "method": "Transfer", "reference": "TRF-7788", "bills": ["BILL-3004"], "amount": 2300000, "status": "approved" },
+  { "payment": "PV-4002", "date": "2025-09-09", "vendor": "PT Internet Maju", "method": "Transfer", "reference": "TRF-7790", "bills": ["BILL-3005"], "amount": 1600000, "status": "processed" },
+  { "payment": "PV-4003", "date": "2025-09-10", "vendor": "PT Sehat Sentosa", "method": "Transfer", "reference": "TRF-7792", "bills": ["BILL-3006"], "amount": 2600000, "status": "processed" },
+  { "payment": "PV-4004", "date": "2025-09-12", "vendor": "PT Sumber Abadi", "method": "Transfer", "reference": "TRF-7800", "bills": ["BILL-3001"], "amount": 5060000, "status": "partial" },
+  { "payment": "PV-4005", "date": "2025-09-13", "vendor": "CV Karya Sejahtera", "method": "Transfer", "reference": "TRF-7803", "bills": ["BILL-3002"], "amount": 4290000, "status": "pending" },
+  { "payment": "PV-4006", "date": "2025-09-15", "vendor": "PT Laser Prima", "method": "Transfer", "reference": "TRF-7809", "bills": ["BILL-3007"], "amount": 3162500, "status": "scheduled" },
+  { "payment": "PV-4007", "date": "2025-09-17", "vendor": "PT Cleo Water", "method": "Giro", "reference": "GIRO-661", "bills": ["BILL-3008"], "amount": 950000, "status": "scheduled" },
+  { "payment": "PV-4008", "date": "2025-09-18", "vendor": "PT Transport Andalan", "method": "Transfer", "reference": "TRF-7812", "bills": ["BILL-3009"], "amount": 1850000, "status": "pending" },
+  { "payment": "PV-4009", "date": "2025-09-19", "vendor": "PT Printing Prima", "method": "Transfer", "reference": "TRF-7815", "bills": ["BILL-3010"], "amount": 750000, "status": "pending" },
+  { "payment": "PV-4010", "date": "2025-09-20", "vendor": "PT Snack Bahagia", "method": "Transfer", "reference": "TRF-7818", "bills": ["BILL-3011"], "amount": 530000, "status": "scheduled" },
+  { "payment": "PV-4011", "date": "2025-09-21", "vendor": "PT Prima Media", "method": "Transfer", "reference": "TRF-7820", "bills": ["BILL-3003"], "amount": 3025000, "status": "pending" },
+  { "payment": "PV-4012", "date": "2025-09-22", "vendor": "PT Konsultan Pajak", "method": "Transfer", "reference": "TRF-7825", "bills": ["BILL-3012"], "amount": 3520000, "status": "pending" }
+]
+

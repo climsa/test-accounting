@@ -1,0 +1,31 @@
+{
+  "assets": [
+    { "group": "Aktiva Lancar", "account": "1-110 Kas Kecil", "amount": 4750000 },
+    { "group": "Aktiva Lancar", "account": "1-120 Bank IDR", "amount": 59300000 },
+    { "group": "Aktiva Lancar", "account": "1-130 Bank Mandiri", "amount": 48000000 },
+    { "group": "Aktiva Lancar", "account": "1-140 Piutang Dagang", "amount": 82700000 },
+    { "group": "Aktiva Lancar", "account": "1-150 Piutang Afiliasi 7WP", "amount": 14500000 },
+    { "group": "Aktiva Lancar", "account": "1-160 Piutang Afiliasi I7N", "amount": 8200000 },
+    { "group": "Aktiva Lancar", "account": "1-170 Piutang Pemegang Saham", "amount": 6500000 },
+    { "group": "Aktiva Lancar", "account": "1-180 Biaya Dibayar Dimuka", "amount": 5400000 },
+    { "group": "Aktiva Lancar", "account": "1-190 Pajak Dibayar Dimuka", "amount": 14150000 }
+  ],
+  "liabilities": [
+    { "group": "Kewajiban Lancar", "account": "2-010 Hutang Usaha", "amount": 39750000 },
+    { "group": "Kewajiban Lancar", "account": "2-020 Hutang Bank", "amount": 28500000 },
+    { "group": "Kewajiban Lancar", "account": "2-030 Pendapatan Diterima Dimuka", "amount": 22000000 },
+    { "group": "Kewajiban Lancar", "account": "2-040 Hutang Pajak", "amount": 10150000 },
+    { "group": "Kewajiban Lancar", "account": "2-050 Hutang Afiliasi 7 Warna Pelangi", "amount": 9500000 },
+    { "group": "Kewajiban Lancar", "account": "2-060 Hutang Afiliasi I 7N", "amount": 7200000 },
+    { "group": "Kewajiban Lancar", "account": "2-070 Hutang Berelasi - AJLB", "amount": 8600000 },
+    { "group": "Kewajiban Lancar", "account": "2-080 Hutang Pemegang Saham", "amount": 12500000 }
+  ],
+  "equity": [
+    { "group": "Ekuitas", "account": "3-200 Laba Ditahan", "amount": 105300000 }
+  ],
+  "totals": {
+    "assets": 243500000,
+    "liabilities": 138200000,
+    "equity": 105300000
+  }
+}

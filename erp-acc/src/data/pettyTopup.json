@@ -1,0 +1,15 @@
+[
+  { "date": "2025-09-01", "box": "PC-A", "topup": 1000000, "spend": 750000, "cash": 1250000, "difference": 0, "status": "closed", "pic": "Budi" },
+  { "date": "2025-09-01", "box": "PC-B", "topup": 800000, "spend": 200000, "cash": 1800000, "difference": 0, "status": "closed", "pic": "Rina" },
+  { "date": "2025-09-05", "box": "PC-C", "topup": 600000, "spend": 450000, "cash": 950000, "difference": 0, "status": "closed", "pic": "Lia" },
+  { "date": "2025-09-07", "box": "PC-D", "topup": 1500000, "spend": 600000, "cash": 2100000, "difference": 0, "status": "closed", "pic": "Andi" },
+  { "date": "2025-09-09", "box": "PC-A", "topup": 500000, "spend": 450000, "cash": 1300000, "difference": 50000, "status": "investigate", "pic": "Budi" },
+  { "date": "2025-09-10", "box": "PC-B", "topup": 300000, "spend": 280000, "cash": 1820000, "difference": 20000, "status": "investigate", "pic": "Rina" },
+  { "date": "2025-09-11", "box": "PC-D", "topup": 700000, "spend": 500000, "cash": 2300000, "difference": 0, "status": "closed", "pic": "Andi" },
+  { "date": "2025-09-12", "box": "PC-A", "topup": 300000, "spend": 320000, "cash": 1280000, "difference": -20000, "status": "investigate", "pic": "Budi" },
+  { "date": "2025-09-13", "box": "PC-B", "topup": 400000, "spend": 350000, "cash": 1870000, "difference": 50000, "status": "investigate", "pic": "Rina" },
+  { "date": "2025-09-14", "box": "PC-D", "topup": 500000, "spend": 480000, "cash": 2320000, "difference": 20000, "status": "investigate", "pic": "Andi" },
+  { "date": "2025-09-15", "box": "PC-A", "topup": 300000, "spend": 310000, "cash": 1270000, "difference": -10000, "status": "investigate", "pic": "Budi" },
+  { "date": "2025-09-16", "box": "PC-B", "topup": 300000, "spend": 270000, "cash": 1890000, "difference": 30000, "status": "investigate", "pic": "Rina" }
+]
+

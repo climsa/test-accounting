@@ -1,0 +1,15 @@
+[
+  { "date": "2025-09-01", "description": "Kas masuk paket acne", "bankAmount": 1665000, "bookAmount": 1665000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-02", "description": "Biaya admin bank", "bankAmount": -25000, "bookAmount": 0, "difference": -25000, "status": "unmatched" },
+  { "date": "2025-09-03", "description": "Kas masuk membership", "bankAmount": 4440000, "bookAmount": 4440000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-04", "description": "Kas masuk e-wallet", "bankAmount": 1054500, "bookAmount": 1054500, "difference": 0, "status": "matched" },
+  { "date": "2025-09-05", "description": "Kas masuk transfer", "bankAmount": 3596400, "bookAmount": 3596400, "difference": 0, "status": "matched" },
+  { "date": "2025-09-07", "description": "Biaya EDC", "bankAmount": -12000, "bookAmount": -12000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-08", "description": "Kas masuk deposit", "bankAmount": 2000000, "bookAmount": 2000000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-10", "description": "Pembayaran vendor", "bankAmount": -2300000, "bookAmount": -2300000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-12", "description": "Biaya bank belum dibukukan", "bankAmount": -45000, "bookAmount": 0, "difference": -45000, "status": "unmatched" },
+  { "date": "2025-09-14", "description": "Kas masuk gift card", "bankAmount": 1500000, "bookAmount": 1500000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-16", "description": "Kas masuk deposit hair removal", "bankAmount": 3000000, "bookAmount": 3000000, "difference": 0, "status": "matched" },
+  { "date": "2025-09-17", "description": "Biaya transfer vendor", "bankAmount": -6500, "bookAmount": -6500, "difference": 0, "status": "matched" }
+]
+

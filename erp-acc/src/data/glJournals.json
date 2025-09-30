@@ -1,0 +1,15 @@
+[
+  { "id": "JV-2025-001", "date": "2025-09-01", "description": "Penjualan paket acne", "debitAccount": "1-120", "creditAccount": "4-100", "debit": 12500000, "credit": 12500000, "status": "posted", "dimensions": { "cabang": "Klinik A", "dokter": "dr. Citra" } },
+  { "id": "JV-2025-002", "date": "2025-09-02", "description": "Pencadangan biaya iklan", "debitAccount": "5-100", "creditAccount": "2-030", "debit": 3500000, "credit": 3500000, "status": "posted", "dimensions": { "dept": "Marketing" } },
+  { "id": "JV-2025-003", "date": "2025-09-03", "description": "Pembayaran gaji klinik", "debitAccount": "6-043", "creditAccount": "1-120", "debit": 48000000, "credit": 48000000, "status": "posted", "dimensions": { "dept": "Operasional" } },
+  { "id": "JV-2025-004", "date": "2025-09-05", "description": "Pembelian skincare DermaCo", "debitAccount": "1-180", "creditAccount": "2-010", "debit": 8900000, "credit": 8900000, "status": "draft", "dimensions": { "cabang": "Gudang Pusat" } },
+  { "id": "JV-2025-005", "date": "2025-09-08", "description": "Biaya listrik klinik B", "debitAccount": "6-019", "creditAccount": "1-130", "debit": 2100000, "credit": 2100000, "status": "posted", "dimensions": { "cabang": "Klinik B" } },
+  { "id": "JV-2025-006", "date": "2025-09-10", "description": "Pendapatan bunga deposito", "debitAccount": "1-120", "creditAccount": "7-110", "debit": 350000, "credit": 350000, "status": "posted", "dimensions": { "cabang": "Klinik A" } },
+  { "id": "JV-2025-007", "date": "2025-09-12", "description": "Akrual biaya pajak", "debitAccount": "6-040", "creditAccount": "2-040", "debit": 1750000, "credit": 1750000, "status": "posted", "dimensions": { "dept": "Finance" } },
+  { "id": "JV-2025-008", "date": "2025-09-14", "description": "Koreksi kas kecil", "debitAccount": "1-110", "creditAccount": "6-028", "debit": 125000, "credit": 125000, "status": "void", "dimensions": { "cabang": "Klinik B" } },
+  { "id": "JV-2025-009", "date": "2025-09-16", "description": "Pembayaran BPJS", "debitAccount": "6-050", "creditAccount": "1-130", "debit": 2600000, "credit": 2600000, "status": "posted", "dimensions": { "dept": "HR" } },
+  { "id": "JV-2025-010", "date": "2025-09-18", "description": "Pendapatan voucher gift card", "debitAccount": "1-120", "creditAccount": "2-030", "debit": 1500000, "credit": 1500000, "status": "draft", "dimensions": { "channel": "Online" } },
+  { "id": "JV-2025-011", "date": "2025-09-20", "description": "Biaya maintenance laser", "debitAccount": "6-032", "creditAccount": "2-070", "debit": 5500000, "credit": 5500000, "status": "posted", "dimensions": { "cabang": "Klinik A" } },
+  { "id": "JV-2025-012", "date": "2025-09-22", "description": "Reklas piutang afiliasi", "debitAccount": "1-150", "creditAccount": "1-160", "debit": 4200000, "credit": 4200000, "status": "draft", "dimensions": { "afiliasi": "7WP" } }
+]
+

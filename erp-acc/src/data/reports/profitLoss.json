@@ -1,0 +1,15 @@
+[
+  { "group": "4-000 Pendapatan", "account": "4-100 Pendapatan Project", "amount": 48000000, "type": "revenue" },
+  { "group": "4-000 Pendapatan", "account": "7-110 Pendapatan Bunga Bank BCA", "amount": 350000, "type": "other-revenue" },
+  { "group": "5-000 Biaya Overhead", "account": "5-100 Biaya Operasional ADVERTISEMENT & PROMOTION", "amount": -9200000, "type": "expense" },
+  { "group": "5-000 Biaya Overhead", "account": "5-110 Biaya Operasional ENTERTAINMENT", "amount": -3200000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-019 ELECTRICITY", "amount": -2100000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-021 INTERNET", "amount": -1600000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-033 TAXATION OF PPH PASAL 21", "amount": -1650000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-037 DEPRECIATION - OFFICE EQUIPMENT", "amount": -8500000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-043 SALARIES AND WAGES", "amount": -48000000, "type": "expense" },
+  { "group": "6-000 Biaya Umum & Administrasi", "account": "6-050 BPJS KESEHATAN", "amount": -2600000, "type": "expense" },
+  { "group": "7-000 Pendapatan/Biaya Lain", "account": "7-100 Pendapatan Lain-lain Diluar Usaha", "amount": 450000, "type": "other-revenue" },
+  { "group": "7-000 Pendapatan/Biaya Lain", "account": "7-200 Biaya Lain-lain Diluar Usaha", "amount": -575000, "type": "other-expense" }
+]
+

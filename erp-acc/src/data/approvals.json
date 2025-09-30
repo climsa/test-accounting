@@ -1,0 +1,15 @@
+[
+  { "role": "Owner", "description": "Approval transaksi di atas 50 juta", "threshold": 50000000, "branch": "Semua", "status": "active" },
+  { "role": "Director", "description": "Approval pembayaran vendor utama", "threshold": 25000000, "branch": "Semua", "status": "active" },
+  { "role": "Finance Manager", "description": "Approval pembayaran rutin", "threshold": 10000000, "branch": "Semua", "status": "active" },
+  { "role": "Clinic Manager", "description": "Approval petty cash & voucher", "threshold": 1000000, "branch": "Cabang", "status": "active" },
+  { "role": "Accounting Supervisor", "description": "Review jurnal & close period", "threshold": 0, "branch": "Head Office", "status": "active" },
+  { "role": "Treasury", "description": "Approval transfer antar bank", "threshold": 20000000, "branch": "Head Office", "status": "active" },
+  { "role": "AR Lead", "description": "Approval credit note & write-off", "threshold": 5000000, "branch": "Head Office", "status": "active" },
+  { "role": "AP Lead", "description": "Approval payment voucher", "threshold": 7000000, "branch": "Head Office", "status": "active" },
+  { "role": "Clinic Supervisor", "description": "Approval paket & deposit", "threshold": 3000000, "branch": "Cabang", "status": "active" },
+  { "role": "Tax Officer", "description": "Approval pelaporan pajak", "threshold": 0, "branch": "Head Office", "status": "active" },
+  { "role": "Inventory Controller", "description": "Approval GRNI & adj stok", "threshold": 2000000, "branch": "Gudang", "status": "active" },
+  { "role": "IT Support", "description": "Approval akses STAT/ALT", "threshold": 0, "branch": "Head Office", "status": "active" }
+]
+

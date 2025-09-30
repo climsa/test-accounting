@@ -1,0 +1,15 @@
+[
+  { "name": "Ayu Lestari", "type": "customer", "contact": "0812-3456-7890", "email": "ayu@example.com", "npwp": "01.234.567.8-999.000", "term": "COD", "status": "active" },
+  { "name": "Rina Putri", "type": "customer", "contact": "0813-6655-1122", "email": "rina@example.com", "npwp": "02.345.678.9-111.000", "term": "30 Hari", "status": "active" },
+  { "name": "Maya Dewi", "type": "customer", "contact": "0817-2233-4455", "email": "maya@example.com", "npwp": "03.345.678.9-333.000", "term": "15 Hari", "status": "active" },
+  { "name": "PT Sumber Abadi", "type": "vendor", "contact": "021-7788-9900", "email": "sales@sumberabadi.co.id", "npwp": "04.123.456.7-890.000", "term": "30 Hari", "status": "active" },
+  { "name": "CV Karya Sejahtera", "type": "vendor", "contact": "021-6677-8899", "email": "finance@karyasejahtera.co.id", "npwp": "05.987.654.3-210.000", "term": "30 Hari", "status": "active" },
+  { "name": "PT Prima Media", "type": "vendor", "contact": "021-8899-1122", "email": "marketing@primamedia.co.id", "npwp": "06.555.444.3-120.000", "term": "45 Hari", "status": "active" },
+  { "name": "PT Medika Prima", "type": "vendor", "contact": "021-6677-1122", "email": "cs@medikaprima.co.id", "npwp": "07.222.333.4-500.000", "term": "30 Hari", "status": "active" },
+  { "name": "PT Laser Prima", "type": "vendor", "contact": "021-3344-5566", "email": "support@laserprima.co.id", "npwp": "08.321.654.5-760.000", "term": "30 Hari", "status": "active" },
+  { "name": "PT Internet Maju", "type": "vendor", "contact": "021-7788-2233", "email": "billing@internetmaju.co.id", "npwp": "09.876.543.2-100.000", "term": "15 Hari", "status": "active" },
+  { "name": "PT Sehat Sentosa", "type": "vendor", "contact": "021-3456-7788", "email": "bpjs@sehatsentosa.co.id", "npwp": "10.765.432.1-110.000", "term": "COD", "status": "active" },
+  { "name": "Putri Andien", "type": "customer", "contact": "0814-2233-7788", "email": "putri@example.com", "npwp": "11.345.678.9-555.000", "term": "30 Hari", "status": "active" },
+  { "name": "Mega Kusuma", "type": "customer", "contact": "0812-9900-7766", "email": "mega@example.com", "npwp": "12.345.678.9-666.000", "term": "30 Hari", "status": "active" }
+]
+

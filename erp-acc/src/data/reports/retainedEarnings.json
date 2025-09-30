@@ -1,0 +1,10 @@
+{
+  "openingBalance": 86000000,
+  "currentProfit": 19500000,
+  "dividend": 0,
+  "adjustments": [
+    { "description": "Penyesuaian audit", "amount": -300000 },
+    { "description": "Selisih kurs", "amount": 600000 }
+  ],
+  "closingBalance": 105300000
+}

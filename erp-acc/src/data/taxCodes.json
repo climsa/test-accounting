@@ -1,0 +1,15 @@
+[
+  { "code": "PPN11-OUT", "name": "PPN 11% Output", "type": "output", "rate": 0.11, "inclusive": true, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPN11-IN", "name": "PPN 11% Input", "type": "input", "rate": 0.11, "inclusive": false, "defaultAccount": "1-190", "status": "active" },
+  { "code": "PPN11-OUT-INC", "name": "PPN 11% Output Inclusive", "type": "output", "rate": 0.11, "inclusive": true, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPN11-IN-CAP", "name": "PPN 11% Input Capital", "type": "input", "rate": 0.11, "inclusive": false, "defaultAccount": "1-190", "status": "active" },
+  { "code": "PPH23", "name": "PPh 23 2%", "type": "withholding", "rate": 0.02, "inclusive": false, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPH21", "name": "PPh 21 Pegawai", "type": "withholding", "rate": 0.05, "inclusive": false, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPH4(2)", "name": "PPh Final 4(2)", "type": "withholding", "rate": 0.1, "inclusive": false, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPN0", "name": "PPN 0%", "type": "output", "rate": 0, "inclusive": true, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPN11-SPLIT", "name": "PPN 11% Split Billing", "type": "output", "rate": 0.11, "inclusive": false, "defaultAccount": "2-040", "status": "active" },
+  { "code": "PPN11-EDC", "name": "PPN 11% Fee EDC", "type": "input", "rate": 0.11, "inclusive": false, "defaultAccount": "1-190", "status": "active" },
+  { "code": "PPN11-SERVICE", "name": "PPN 11% Service", "type": "output", "rate": 0.11, "inclusive": true, "defaultAccount": "2-040", "status": "active" },
+  { "code": "ZERO-RATED", "name": "Zero Rated Export", "type": "output", "rate": 0, "inclusive": false, "defaultAccount": "2-040", "status": "active" }
+]
+

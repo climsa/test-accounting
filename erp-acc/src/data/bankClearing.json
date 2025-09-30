@@ -1,0 +1,15 @@
+[
+  { "channel": "EDC BCA", "batchDate": "2025-09-01", "transactions": 24, "gross": 12450000, "fee": 87000, "net": 12363000, "settlementDay": "H+1", "status": "cleared" },
+  { "channel": "EDC Mandiri", "batchDate": "2025-09-02", "transactions": 18, "gross": 8450000, "fee": 59200, "net": 8390800, "settlementDay": "H+1", "status": "cleared" },
+  { "channel": "OVO", "batchDate": "2025-09-03", "transactions": 32, "gross": 5650000, "fee": 67800, "net": 5582200, "settlementDay": "H+0", "status": "cleared" },
+  { "channel": "Gopay", "batchDate": "2025-09-04", "transactions": 29, "gross": 4950000, "fee": 59400, "net": 4890600, "settlementDay": "H+0", "status": "cleared" },
+  { "channel": "ShopeePay", "batchDate": "2025-09-05", "transactions": 21, "gross": 3850000, "fee": 46200, "net": 3803800, "settlementDay": "H+1", "status": "cleared" },
+  { "channel": "LinkAja", "batchDate": "2025-09-06", "transactions": 16, "gross": 2450000, "fee": 39200, "net": 2410800, "settlementDay": "H+1", "status": "pending-fee" },
+  { "channel": "QRIS BCA", "batchDate": "2025-09-07", "transactions": 27, "gross": 4150000, "fee": 103750, "net": 4046250, "settlementDay": "H+0", "status": "cleared" },
+  { "channel": "QRIS Mandiri", "batchDate": "2025-09-08", "transactions": 22, "gross": 3520000, "fee": 88000, "net": 3432000, "settlementDay": "H+0", "status": "cleared" },
+  { "channel": "EDC BCA", "batchDate": "2025-09-09", "transactions": 25, "gross": 13250000, "fee": 92750, "net": 13157250, "settlementDay": "H+1", "status": "cleared" },
+  { "channel": "EDC Mandiri", "batchDate": "2025-09-10", "transactions": 17, "gross": 7650000, "fee": 53550, "net": 7596450, "settlementDay": "H+1", "status": "pending-clearing" },
+  { "channel": "ShopeePay", "batchDate": "2025-09-11", "transactions": 19, "gross": 2980000, "fee": 35760, "net": 2944240, "settlementDay": "H+1", "status": "cleared" },
+  { "channel": "Gopay", "batchDate": "2025-09-12", "transactions": 30, "gross": 5120000, "fee": 61440, "net": 5058560, "settlementDay": "H+0", "status": "cleared" }
+]
+

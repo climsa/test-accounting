@@ -1,0 +1,13 @@
+[
+  { "period": "2025-09", "status": "in-progress", "owner": "Accounting", "openDate": "2025-10-01", "targetClose": "2025-10-05", "checklist": ["Posting jurnal pending", "Rekonsiliasi bank", "Konfirmasi AR/AP"], "notes": "Menunggu approval CFO" },
+  { "period": "2025-08", "status": "closed", "owner": "Accounting", "openDate": "2025-09-01", "closeDate": "2025-09-04", "checklist": ["Bank match", "Aging AR final", "PPN e-filing"], "notes": "Semua laporan selesai" },
+  { "period": "2025-07", "status": "closed", "owner": "Accounting", "openDate": "2025-08-01", "closeDate": "2025-08-04", "checklist": ["Stock opname", "Intercompany recon"], "notes": "Tidak ada temuan" },
+  { "period": "2025-06", "status": "closed", "owner": "Accounting", "openDate": "2025-07-01", "closeDate": "2025-07-05", "checklist": ["Depresiasi", "PPH 21", "Kas kecil"], "notes": "Late approval petty" },
+  { "period": "2025-05", "status": "closed", "owner": "Accounting", "openDate": "2025-06-01", "closeDate": "2025-06-03", "checklist": ["PPN", "Rekonsiliasi clearing", "Posting recurring"], "notes": "OK" },
+  { "period": "2025-04", "status": "closed", "owner": "Accounting", "openDate": "2025-05-01", "closeDate": "2025-05-04", "checklist": ["Trial balance", "Profit loss"], "notes": "OK" },
+  { "period": "2025-03", "status": "closed", "owner": "Accounting", "openDate": "2025-04-01", "closeDate": "2025-04-03", "checklist": ["AR aging", "AP aging", "Bank"], "notes": "OK" },
+  { "period": "2025-02", "status": "closed", "owner": "Accounting", "openDate": "2025-03-01", "closeDate": "2025-03-05", "checklist": ["COGS", "Inventory adjustments"], "notes": "OK" },
+  { "period": "2025-01", "status": "closed", "owner": "Accounting", "openDate": "2025-02-01", "closeDate": "2025-02-04", "checklist": ["Opening balance", "Audit trail"], "notes": "OK" },
+  { "period": "2024-12", "status": "archived", "owner": "Accounting", "openDate": "2025-01-01", "closeDate": "2025-01-07", "checklist": ["Audit external", "Management sign-off"], "notes": "Audit KAP" }
+]
+

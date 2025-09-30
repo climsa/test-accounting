@@ -1,0 +1,15 @@
+[
+  { "sku": "SC-RET-01", "name": "Serum Retinol 1%", "method": "FIFO", "lastCost": 185000, "averageCost": 180000, "backflush": true, "status": "active" },
+  { "sku": "SC-SPF-50", "name": "Sunscreen SPF50", "method": "Average", "lastCost": 95000, "averageCost": 97000, "backflush": true, "status": "active" },
+  { "sku": "KIT-ACNE", "name": "Treatment Kit Acne", "method": "FIFO", "lastCost": 320000, "averageCost": 315000, "backflush": true, "status": "active" },
+  { "sku": "KIT-BRIGHT", "name": "Brightening Kit", "method": "Average", "lastCost": 285000, "averageCost": 280000, "backflush": true, "status": "active" },
+  { "sku": "MED-LASER", "name": "Laser Gel", "method": "FIFO", "lastCost": 150000, "averageCost": 148000, "backflush": false, "status": "active" },
+  { "sku": "MED-ANES", "name": "Anesthetic Cream", "method": "FIFO", "lastCost": 95000, "averageCost": 94000, "backflush": false, "status": "active" },
+  { "sku": "KIT-MICRO", "name": "Microneedling Set", "method": "Average", "lastCost": 450000, "averageCost": 440000, "backflush": true, "status": "active" },
+  { "sku": "SC-CLNS", "name": "Gentle Cleanser", "method": "Average", "lastCost": 75000, "averageCost": 76000, "backflush": true, "status": "active" },
+  { "sku": "SC-MOIST", "name": "Hydrating Moisturizer", "method": "FIFO", "lastCost": 120000, "averageCost": 118000, "backflush": true, "status": "active" },
+  { "sku": "MED-SYRINGE", "name": "Disposable Syringe", "method": "FIFO", "lastCost": 12000, "averageCost": 11800, "backflush": false, "status": "active" },
+  { "sku": "MED-GLOVE", "name": "Nitrile Gloves", "method": "Average", "lastCost": 28000, "averageCost": 27500, "backflush": false, "status": "active" },
+  { "sku": "KIT-POST", "name": "Post Treatment Kit", "method": "Average", "lastCost": 150000, "averageCost": 148000, "backflush": true, "status": "active" }
+]
+

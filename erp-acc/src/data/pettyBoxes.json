@@ -1,0 +1,15 @@
+[
+  { "code": "PC-A", "custodian": "Budi", "branch": "Klinik A", "limit": 2500000, "balance": 1250000, "status": "active" },
+  { "code": "PC-B", "custodian": "Rina", "branch": "Klinik B", "limit": 2000000, "balance": 1800000, "status": "active" },
+  { "code": "PC-C", "custodian": "Lia", "branch": "Klinik C", "limit": 2000000, "balance": 950000, "status": "active" },
+  { "code": "PC-D", "custodian": "Andi", "branch": "Head Office", "limit": 3000000, "balance": 2100000, "status": "active" },
+  { "code": "PC-E", "custodian": "Santi", "branch": "Warehouse", "limit": 1500000, "balance": 800000, "status": "active" },
+  { "code": "PC-F", "custodian": "Dewi", "branch": "Clinic Mobile", "limit": 1000000, "balance": 600000, "status": "active" },
+  { "code": "PC-G", "custodian": "Rudi", "branch": "Training Center", "limit": 1200000, "balance": 450000, "status": "active" },
+  { "code": "PC-H", "custodian": "Mila", "branch": "Clinic VIP", "limit": 3000000, "balance": 2750000, "status": "active" },
+  { "code": "PC-I", "custodian": "Yoga", "branch": "Clinic South", "limit": 1800000, "balance": 900000, "status": "active" },
+  { "code": "PC-J", "custodian": "Tika", "branch": "Clinic North", "limit": 1800000, "balance": 1100000, "status": "active" },
+  { "code": "PC-K", "custodian": "Hani", "branch": "Clinic East", "limit": 1800000, "balance": 1600000, "status": "active" },
+  { "code": "PC-L", "custodian": "Niko", "branch": "Clinic West", "limit": 1800000, "balance": 1400000, "status": "active" }
+]
+

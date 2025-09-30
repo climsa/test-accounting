@@ -1,0 +1,19 @@
+[
+  { "section": "Arus Kas dari Aktivitas Operasi", "items": [
+      { "label": "Laba bersih periode", "amount": 19500000 },
+      { "label": "Penyesuaian: Penyusutan & amortisasi", "amount": 8500000 },
+      { "label": "Penyesuaian: Perubahan piutang usaha", "amount": -4700000 },
+      { "label": "Penyesuaian: Perubahan persediaan", "amount": -2600000 },
+      { "label": "Penyesuaian: Perubahan hutang usaha", "amount": 6250000 },
+      { "label": "Penyesuaian: Pendapatan diterima dimuka", "amount": 3500000 },
+      { "label": "Penyesuaian: Pajak dibayar dimuka", "amount": -1650000 }
+    ], "net": 31800000 },
+  { "section": "Arus Kas dari Aktivitas Investasi", "items": [
+      { "label": "Pembelian aset tetap", "amount": -15700000 }
+    ], "net": -15700000 },
+  { "section": "Arus Kas dari Aktivitas Pendanaan", "items": [
+      { "label": "Penerimaan pinjaman", "amount": 15000000 },
+      { "label": "Pembayaran pinjaman", "amount": -7500000 }
+    ], "net": 7500000 }
+]
+

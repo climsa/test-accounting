@@ -1,0 +1,15 @@
+[
+  { "number": "PV-2001", "date": "2025-09-05", "box": "PC-A", "category": "Transport", "description": "Grab antar dokter", "amount": 85000, "attachments": 1, "approval": "waiting", "status": "draft" },
+  { "number": "PV-2002", "date": "2025-09-05", "box": "PC-B", "category": "Consumables", "description": "Kopi tamu VIP", "amount": 50000, "attachments": 0, "approval": "approved", "status": "posted" },
+  { "number": "PV-2003", "date": "2025-09-06", "box": "PC-A", "category": "Pantry", "description": "Snack meeting team", "amount": 120000, "attachments": 2, "approval": "approved", "status": "posted" },
+  { "number": "PV-2004", "date": "2025-09-07", "box": "PC-D", "category": "Office Supplies", "description": "ATK urgent", "amount": 185000, "attachments": 1, "approval": "waiting", "status": "draft" },
+  { "number": "PV-2005", "date": "2025-09-08", "box": "PC-A", "category": "Transport", "description": "Tol delivery skincare", "amount": 45000, "attachments": 1, "approval": "approved", "status": "posted" },
+  { "number": "PV-2006", "date": "2025-09-09", "box": "PC-B", "category": "Maintenance", "description": "Lampu ruangan", "amount": 95000, "attachments": 1, "approval": "waiting", "status": "draft" },
+  { "number": "PV-2007", "date": "2025-09-09", "box": "PC-D", "category": "Entertainment", "description": "Bunga ucapan", "amount": 150000, "attachments": 1, "approval": "approved", "status": "posted" },
+  { "number": "PV-2008", "date": "2025-09-10", "box": "PC-A", "category": "Training", "description": "Snack training", "amount": 98000, "attachments": 2, "approval": "approved", "status": "posted" },
+  { "number": "PV-2009", "date": "2025-09-11", "box": "PC-B", "category": "Transport", "description": "Parkir dokter", "amount": 25000, "attachments": 1, "approval": "approved", "status": "posted" },
+  { "number": "PV-2010", "date": "2025-09-12", "box": "PC-A", "category": "Consumables", "description": "Air galon", "amount": 45000, "attachments": 1, "approval": "approved", "status": "posted" },
+  { "number": "PV-2011", "date": "2025-09-13", "box": "PC-D", "category": "Security", "description": "Tip security overtime", "amount": 60000, "attachments": 1, "approval": "waiting", "status": "draft" },
+  { "number": "PV-2012", "date": "2025-09-14", "box": "PC-A", "category": "Others", "description": "Bingkisan pasien loyal", "amount": 150000, "attachments": 1, "approval": "approved", "status": "posted" }
+]
+

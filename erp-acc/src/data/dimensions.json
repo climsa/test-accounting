@@ -1,0 +1,15 @@
+[
+  { "dimension": "Cabang", "type": "single", "options": ["Klinik A", "Klinik B", "Klinik C", "Head Office"], "status": "active" },
+  { "dimension": "Gudang", "type": "single", "options": ["Gudang Pusat", "Klinik A", "Klinik B", "Klinik C"], "status": "active" },
+  { "dimension": "Departemen", "type": "multi", "options": ["Accounting", "Finance", "Marketing", "Operations", "HR"], "status": "active" },
+  { "dimension": "Dokter", "type": "single", "options": ["dr. Citra", "dr. Reza", "dr. Awan", "dr. Dini"], "status": "active" },
+  { "dimension": "Terapis", "type": "single", "options": ["Nina", "Sari", "Mila", "Yoga"], "status": "active" },
+  { "dimension": "Kategori Treatment", "type": "single", "options": ["Acne", "Brightening", "Body", "Hair Removal"], "status": "active" },
+  { "dimension": "Campaign", "type": "multi", "options": ["IG-Sept", "Tokopedia 9.9", "Referral Program", "Corporate"], "status": "active" },
+  { "dimension": "Channel", "type": "single", "options": ["Front Desk", "Clinic App", "Marketplace", "Corporate"], "status": "active" },
+  { "dimension": "Project", "type": "single", "options": ["Renovasi Klinik A", "Launching Klinik C", "Digital Marketing"], "status": "active" },
+  { "dimension": "Shift", "type": "single", "options": ["Pagi", "Siang", "Malam"], "status": "active" },
+  { "dimension": "Customer Tier", "type": "single", "options": ["Silver", "Gold", "Platinum"], "status": "active" },
+  { "dimension": "Vendor Group", "type": "single", "options": ["Skincare", "Media", "Utility", "Payroll"], "status": "active" }
+]
+

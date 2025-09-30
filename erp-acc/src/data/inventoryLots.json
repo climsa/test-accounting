@@ -1,0 +1,15 @@
+[
+  { "sku": "SC-RET-01", "lot": "SR-001", "expiry": "2026-01-01", "quantity": 50, "location": "Gudang Pusat", "status": "safe" },
+  { "sku": "SC-RET-01", "lot": "SR-002", "expiry": "2025-12-01", "quantity": 35, "location": "Klinik A", "status": "warning" },
+  { "sku": "SC-SPF-50", "lot": "SPF-010", "expiry": "2026-03-15", "quantity": 80, "location": "Gudang Pusat", "status": "safe" },
+  { "sku": "SC-SPF-50", "lot": "SPF-011", "expiry": "2025-10-10", "quantity": 40, "location": "Klinik B", "status": "urgent" },
+  { "sku": "KIT-ACNE", "lot": "ACNE-2025-01", "expiry": "2025-11-30", "quantity": 25, "location": "Gudang Pusat", "status": "warning" },
+  { "sku": "KIT-MICRO", "lot": "MICRO-2025-02", "expiry": "2026-05-05", "quantity": 18, "location": "Klinik A", "status": "safe" },
+  { "sku": "KIT-BRIGHT", "lot": "BRIGHT-2025-01", "expiry": "2026-02-20", "quantity": 30, "location": "Klinik B", "status": "safe" },
+  { "sku": "MED-LASER", "lot": "LASER-2025-07", "expiry": "2025-10-01", "quantity": 22, "location": "Klinik A", "status": "urgent" },
+  { "sku": "MED-ANES", "lot": "ANES-2025-05", "expiry": "2025-12-31", "quantity": 28, "location": "Klinik B", "status": "warning" },
+  { "sku": "SC-CLNS", "lot": "CLNS-2025-03", "expiry": "2026-04-14", "quantity": 65, "location": "Gudang Pusat", "status": "safe" },
+  { "sku": "SC-MOIST", "lot": "MOIST-2025-02", "expiry": "2025-12-12", "quantity": 55, "location": "Klinik C", "status": "warning" },
+  { "sku": "KIT-POST", "lot": "POST-2025-01", "expiry": "2026-01-31", "quantity": 32, "location": "Gudang Pusat", "status": "safe" }
+]
+

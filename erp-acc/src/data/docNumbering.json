@@ -1,0 +1,15 @@
+[
+  { "entity": "Klinik A", "document": "Invoice", "prefix": "INV-A", "digits": 4, "reset": "monthly", "current": "INV-A-0925-1042", "status": "locked" },
+  { "entity": "Klinik A", "document": "Receipt", "prefix": "RC-A", "digits": 4, "reset": "monthly", "current": "RC-A-0925-2031", "status": "locked" },
+  { "entity": "Klinik A", "document": "Bill", "prefix": "BILL-A", "digits": 4, "reset": "monthly", "current": "BILL-A-0925-3011", "status": "locked" },
+  { "entity": "Klinik B", "document": "Invoice", "prefix": "INV-B", "digits": 4, "reset": "monthly", "current": "INV-B-0925-0801", "status": "locked" },
+  { "entity": "Klinik B", "document": "Receipt", "prefix": "RC-B", "digits": 4, "reset": "monthly", "current": "RC-B-0925-1710", "status": "locked" },
+  { "entity": "Klinik B", "document": "Bill", "prefix": "BILL-B", "digits": 4, "reset": "monthly", "current": "BILL-B-0925-2206", "status": "locked" },
+  { "entity": "Head Office", "document": "Journal", "prefix": "JV", "digits": 4, "reset": "monthly", "current": "JV-0925-0120", "status": "locked" },
+  { "entity": "Head Office", "document": "Payment", "prefix": "PV", "digits": 4, "reset": "monthly", "current": "PV-0925-4012", "status": "locked" },
+  { "entity": "Head Office", "document": "Deposit", "prefix": "DEP", "digits": 3, "reset": "annual", "current": "DEP-25-012", "status": "locked" },
+  { "entity": "Head Office", "document": "Gift Card", "prefix": "GIF", "digits": 3, "reset": "annual", "current": "GIF-25-045", "status": "locked" },
+  { "entity": "Head Office", "document": "Petty Voucher", "prefix": "PVH", "digits": 4, "reset": "monthly", "current": "PVH-0925-2012", "status": "locked" },
+  { "entity": "Head Office", "document": "Topup", "prefix": "PTU", "digits": 4, "reset": "monthly", "current": "PTU-0925-1606", "status": "locked" }
+]
+

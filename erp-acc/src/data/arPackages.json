@@ -1,0 +1,15 @@
+[
+  { "code": "PK-ACNE-S", "name": "Paket Acne Silver", "type": "Treatment", "sessions": 3, "durationMonths": 3, "price": 2500000, "deferred": true, "channel": "Front Desk", "status": "active" },
+  { "code": "PK-ACNE-G", "name": "Paket Acne Gold", "type": "Treatment", "sessions": 6, "durationMonths": 6, "price": 4200000, "deferred": true, "channel": "Front Desk", "status": "active" },
+  { "code": "MB-GLOW", "name": "Membership Glow", "type": "Membership", "sessions": 6, "durationMonths": 6, "price": 4000000, "deferred": true, "channel": "Online", "status": "active" },
+  { "code": "MB-GLOW-PLUS", "name": "Membership Glow Plus", "type": "Membership", "sessions": 12, "durationMonths": 12, "price": 7200000, "deferred": true, "channel": "Online", "status": "active" },
+  { "code": "PK-BRIGHT", "name": "Brightening Combo", "type": "Bundle", "sessions": 4, "durationMonths": 4, "price": 3600000, "deferred": true, "channel": "Marketplace", "status": "active" },
+  { "code": "PK-WHITE", "name": "Whitening Infusion", "type": "Treatment", "sessions": 5, "durationMonths": 6, "price": 5000000, "deferred": true, "channel": "Front Desk", "status": "active" },
+  { "code": "PK-HAIR", "name": "Hair Removal Unlimited", "type": "Treatment", "sessions": 8, "durationMonths": 8, "price": 6400000, "deferred": true, "channel": "Online", "status": "active" },
+  { "code": "MB-WELLNESS", "name": "Wellness Membership", "type": "Membership", "sessions": 12, "durationMonths": 12, "price": 7800000, "deferred": true, "channel": "Front Desk", "status": "active" },
+  { "code": "PK-POSTACNE", "name": "Post Acne Recovery", "type": "Bundle", "sessions": 4, "durationMonths": 6, "price": 3600000, "deferred": true, "channel": "Clinic App", "status": "active" },
+  { "code": "PK-TRAVEL", "name": "Travel Skincare Kit", "type": "Bundle", "sessions": 0, "durationMonths": 3, "price": 1800000, "deferred": false, "channel": "Marketplace", "status": "active" },
+  { "code": "PK-SHINE", "name": "Shine Day Package", "type": "Treatment", "sessions": 2, "durationMonths": 2, "price": 1800000, "deferred": true, "channel": "Clinic App", "status": "active" },
+  { "code": "PK-RESET", "name": "Skin Reset", "type": "Bundle", "sessions": 5, "durationMonths": 6, "price": 4800000, "deferred": true, "channel": "Front Desk", "status": "active" }
+]
+

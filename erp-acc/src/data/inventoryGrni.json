@@ -1,0 +1,15 @@
+[
+  { "grn": "GRN-5001", "date": "2025-09-01", "vendor": "PT Sumber Abadi", "warehouse": "Gudang Pusat", "items": 12, "value": 8000000, "status": "open" },
+  { "grn": "GRN-5002", "date": "2025-09-02", "vendor": "CV Karya Sejahtera", "warehouse": "Gudang Pusat", "items": 8, "value": 4500000, "status": "posted" },
+  { "grn": "GRN-5003", "date": "2025-09-03", "vendor": "PT Medika Prima", "warehouse": "Klinik A", "items": 6, "value": 2600000, "status": "posted" },
+  { "grn": "GRN-5004", "date": "2025-09-04", "vendor": "PT Laser Prima", "warehouse": "Klinik B", "items": 4, "value": 1750000, "status": "pending-adjust" },
+  { "grn": "GRN-5005", "date": "2025-09-05", "vendor": "PT Dermalab", "warehouse": "Gudang Pusat", "items": 10, "value": 5200000, "status": "posted" },
+  { "grn": "GRN-5006", "date": "2025-09-07", "vendor": "PT Sehat Sentosa", "warehouse": "Klinik B", "items": 5, "value": 2100000, "status": "pending-adjust" },
+  { "grn": "GRN-5007", "date": "2025-09-08", "vendor": "PT Prima Media", "warehouse": "Gudang Pusat", "items": 3, "value": 850000, "status": "posted" },
+  { "grn": "GRN-5008", "date": "2025-09-09", "vendor": "PT Sumber Abadi", "warehouse": "Gudang Pusat", "items": 9, "value": 4700000, "status": "open" },
+  { "grn": "GRN-5009", "date": "2025-09-10", "vendor": "CV Karya Sejahtera", "warehouse": "Klinik C", "items": 7, "value": 3200000, "status": "posted" },
+  { "grn": "GRN-5010", "date": "2025-09-11", "vendor": "PT Dermalab", "warehouse": "Gudang Pusat", "items": 5, "value": 2650000, "status": "open" },
+  { "grn": "GRN-5011", "date": "2025-09-12", "vendor": "PT Medika Prima", "warehouse": "Klinik A", "items": 6, "value": 2350000, "status": "posted" },
+  { "grn": "GRN-5012", "date": "2025-09-13", "vendor": "PT Laser Prima", "warehouse": "Klinik B", "items": 4, "value": 1850000, "status": "pending-adjust" }
+]
+

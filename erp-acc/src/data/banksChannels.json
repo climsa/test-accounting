@@ -1,0 +1,15 @@
+[
+  { "name": "BCA", "type": "bank", "identifier": "1234567890", "currency": "IDR", "branch": "Klinik A", "settlement": "H+0", "fee": 0.000, "status": "active" },
+  { "name": "Mandiri", "type": "bank", "identifier": "9988776655", "currency": "IDR", "branch": "Klinik B", "settlement": "H+0", "fee": 0.000, "status": "active" },
+  { "name": "OVO", "type": "e-wallet", "identifier": "ovo-merchant-01", "currency": "IDR", "branch": "Head Office", "settlement": "H+0", "fee": 0.012, "status": "active" },
+  { "name": "Gopay", "type": "e-wallet", "identifier": "gopay-merchant-01", "currency": "IDR", "branch": "Head Office", "settlement": "H+0", "fee": 0.012, "status": "active" },
+  { "name": "ShopeePay", "type": "e-wallet", "identifier": "shopeepay-merchant-01", "currency": "IDR", "branch": "Marketplace", "settlement": "H+1", "fee": 0.012, "status": "active" },
+  { "name": "EDC BCA", "type": "edc", "identifier": "edc-bca-01", "currency": "IDR", "branch": "Klinik A", "settlement": "H+1", "fee": 0.007, "status": "active" },
+  { "name": "EDC Mandiri", "type": "edc", "identifier": "edc-mandiri-01", "currency": "IDR", "branch": "Klinik B", "settlement": "H+1", "fee": 0.007, "status": "active" },
+  { "name": "QRIS BCA", "type": "qris", "identifier": "qris-bca-01", "currency": "IDR", "branch": "Klinik A", "settlement": "H+0", "fee": 0.003, "status": "active" },
+  { "name": "QRIS Mandiri", "type": "qris", "identifier": "qris-mandiri-01", "currency": "IDR", "branch": "Klinik B", "settlement": "H+0", "fee": 0.003, "status": "active" },
+  { "name": "BCA Payroll", "type": "bank", "identifier": "1234567211", "currency": "IDR", "branch": "Head Office", "settlement": "H+0", "fee": 0, "status": "active" },
+  { "name": "Mandiri Deposit", "type": "bank", "identifier": "9988771100", "currency": "IDR", "branch": "Head Office", "settlement": "H+0", "fee": 0, "status": "active" },
+  { "name": "BCA Clearing", "type": "bank", "identifier": "1234999910", "currency": "IDR", "branch": "Head Office", "settlement": "H+0", "fee": 0.0, "status": "active" }
+]
+

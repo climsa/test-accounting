@@ -1,0 +1,15 @@
+[
+  { "template": "Gaji Terapis", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-01", "amount": 45000000, "debitAccount": "6-043", "creditAccount": "1-120", "status": "active" },
+  { "template": "Sewa Gedung Klinik A", "type": "recurring", "frequency": "Triwulanan", "nextRun": "2025-10-05", "amount": 120000000, "debitAccount": "6-030", "creditAccount": "2-070", "status": "active" },
+  { "template": "Akrual Pajak PPh21", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-03", "amount": 16500000, "debitAccount": "6-033", "creditAccount": "2-040", "status": "active" },
+  { "template": "Penyusutan Peralatan Klinik", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-01", "amount": 8500000, "debitAccount": "6-037", "creditAccount": "3-200", "status": "active" },
+  { "template": "Pembalik Biaya Event", "type": "reversing", "frequency": "Bulanan", "nextRun": "2025-10-02", "amount": 5200000, "debitAccount": "2-030", "creditAccount": "5-110", "status": "scheduled" },
+  { "template": "Pencadangan Iklan Marketplace", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-07", "amount": 6000000, "debitAccount": "5-100", "creditAccount": "2-030", "status": "active" },
+  { "template": "Biaya Listrik Klinik B", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-12", "amount": 2200000, "debitAccount": "6-019", "creditAccount": "1-130", "status": "active" },
+  { "template": "Biaya Internet Seluruh Klinik", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-04", "amount": 1600000, "debitAccount": "6-021", "creditAccount": "1-120", "status": "active" },
+  { "template": "Pencadangan THR", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-01", "amount": 9500000, "debitAccount": "6-044", "creditAccount": "3-200", "status": "active" },
+  { "template": "Pembalik Diskon Paket", "type": "reversing", "frequency": "Bulanan", "nextRun": "2025-10-09", "amount": 3500000, "debitAccount": "2-030", "creditAccount": "4-100", "status": "scheduled" },
+  { "template": "Penyusutan Kendaraan", "type": "recurring", "frequency": "Bulanan", "nextRun": "2025-10-06", "amount": 7200000, "debitAccount": "6-038", "creditAccount": "3-200", "status": "active" },
+  { "template": "Reversing Akrual Training", "type": "reversing", "frequency": "Bulanan", "nextRun": "2025-10-15", "amount": 2800000, "debitAccount": "6-053", "creditAccount": "2-030", "status": "scheduled" }
+]
+

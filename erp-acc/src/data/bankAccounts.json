@@ -1,0 +1,15 @@
+[
+  { "bank": "BCA", "accountName": "PT Derma Glow", "number": "1234567890", "currency": "IDR", "balance": 75000000, "branch": "Klinik A", "status": "active" },
+  { "bank": "Mandiri", "accountName": "PT Derma Glow", "number": "9988776655", "currency": "IDR", "balance": 48000000, "branch": "Klinik B", "status": "active" },
+  { "bank": "BCA", "accountName": "PT Derma Glow USD", "number": "1234500011", "currency": "USD", "balance": 125000, "branch": "Head Office", "status": "active" },
+  { "bank": "CIMB", "accountName": "PT Derma Glow", "number": "7766554433", "currency": "IDR", "balance": 18500000, "branch": "Klinik A", "status": "active" },
+  { "bank": "Maybank", "accountName": "PT Derma Glow", "number": "6655443322", "currency": "IDR", "balance": 9600000, "branch": "Klinik C", "status": "active" },
+  { "bank": "Permata", "accountName": "PT Derma Glow", "number": "5544332211", "currency": "IDR", "balance": 5200000, "branch": "Head Office", "status": "active" },
+  { "bank": "BCA", "accountName": "PT Derma Glow Payroll", "number": "1234567211", "currency": "IDR", "balance": 13200000, "branch": "Head Office", "status": "active" },
+  { "bank": "Mandiri", "accountName": "PT Derma Glow Deposit", "number": "9988771100", "currency": "IDR", "balance": 25000000, "branch": "Head Office", "status": "active" },
+  { "bank": "BCA", "accountName": "PT Derma Glow Clearing", "number": "1234999910", "currency": "IDR", "balance": 8500000, "branch": "Head Office", "status": "active" },
+  { "bank": "Danamon", "accountName": "PT Derma Glow", "number": "4422110099", "currency": "IDR", "balance": 7200000, "branch": "Marketplace", "status": "active" },
+  { "bank": "BCA", "accountName": "PT Derma Glow Petty", "number": "1234560001", "currency": "IDR", "balance": 3200000, "branch": "Head Office", "status": "active" },
+  { "bank": "Mandiri", "accountName": "PT Derma Glow Reserve", "number": "9988772200", "currency": "IDR", "balance": 19500000, "branch": "Head Office", "status": "active" }
+]
+

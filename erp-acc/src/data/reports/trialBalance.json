@@ -1,0 +1,15 @@
+[
+  { "code": "1-110", "name": "Kas Kecil", "saldoAwalD": 3500000, "saldoAwalK": 0, "lrDebet": 1250000, "lrKredit": 0, "neracaDebet": 4750000, "neracaKredit": 0 },
+  { "code": "1-120", "name": "Bank IDR", "saldoAwalD": 52000000, "saldoAwalK": 0, "lrDebet": 19800000, "lrKredit": 12500000, "neracaDebet": 59300000, "neracaKredit": 0 },
+  { "code": "1-140", "name": "Piutang Dagang", "saldoAwalD": 78000000, "saldoAwalK": 0, "lrDebet": 9200000, "lrKredit": 4500000, "neracaDebet": 82700000, "neracaKredit": 0 },
+  { "code": "1-190", "name": "Pajak Dibayar Dimuka", "saldoAwalD": 12500000, "saldoAwalK": 0, "lrDebet": 1650000, "lrKredit": 0, "neracaDebet": 14150000, "neracaKredit": 0 },
+  { "code": "2-010", "name": "Hutang Usaha", "saldoAwalD": 0, "saldoAwalK": 28500000, "lrDebet": 0, "lrKredit": 11250000, "neracaDebet": 0, "neracaKredit": 39750000 },
+  { "code": "2-030", "name": "Pendapatan Diterima Dimuka", "saldoAwalD": 0, "saldoAwalK": 18500000, "lrDebet": 0, "lrKredit": 3500000, "neracaDebet": 0, "neracaKredit": 22000000 },
+  { "code": "2-040", "name": "Hutang Pajak", "saldoAwalD": 0, "saldoAwalK": 9200000, "lrDebet": 1750000, "lrKredit": 850000, "neracaDebet": 0, "neracaKredit": 10150000 },
+  { "code": "3-200", "name": "Laba Ditahan", "saldoAwalD": 0, "saldoAwalK": 38500000, "lrDebet": 0, "lrKredit": 0, "neracaDebet": 0, "neracaKredit": 38500000 },
+  { "code": "4-100", "name": "Pendapatan Project", "saldoAwalD": 0, "saldoAwalK": 0, "lrDebet": 0, "lrKredit": 48000000, "neracaDebet": 0, "neracaKredit": 48000000 },
+  { "code": "5-100", "name": "Biaya Iklan", "saldoAwalD": 0, "saldoAwalK": 0, "lrDebet": 9200000, "lrKredit": 0, "neracaDebet": 9200000, "neracaKredit": 0 },
+  { "code": "6-019", "name": "Listrik", "saldoAwalD": 0, "saldoAwalK": 0, "lrDebet": 2100000, "lrKredit": 0, "neracaDebet": 2100000, "neracaKredit": 0 },
+  { "code": "7-110", "name": "Pendapatan Bunga", "saldoAwalD": 0, "saldoAwalK": 0, "lrDebet": 0, "lrKredit": 350000, "neracaDebet": 0, "neracaKredit": 350000 }
+]
+

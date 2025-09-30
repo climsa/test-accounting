@@ -1,0 +1,15 @@
+[
+  { "number": "BILL-3001", "date": "2025-09-01", "vendor": "PT Sumber Abadi", "category": "Bahan Treatment", "term": "30 Hari", "dueDate": "2025-10-01", "subtotal": 9200000, "tax": 920000, "total": 10120000, "status": "open" },
+  { "number": "BILL-3002", "date": "2025-09-02", "vendor": "CV Karya Sejahtera", "category": "Skincare Retail", "term": "30 Hari", "dueDate": "2025-10-02", "subtotal": 7800000, "tax": 780000, "total": 8580000, "status": "open" },
+  { "number": "BILL-3003", "date": "2025-09-03", "vendor": "PT Prima Media", "category": "Advertisement", "term": "45 Hari", "dueDate": "2025-10-18", "subtotal": 5500000, "tax": 550000, "total": 6050000, "status": "open" },
+  { "number": "BILL-3004", "date": "2025-09-04", "vendor": "PT Listrik Nusantara", "category": "Listrik", "term": "15 Hari", "dueDate": "2025-09-19", "subtotal": 2300000, "tax": 0, "total": 2300000, "status": "paid" },
+  { "number": "BILL-3005", "date": "2025-09-05", "vendor": "PT Internet Maju", "category": "Internet", "term": "15 Hari", "dueDate": "2025-09-20", "subtotal": 1600000, "tax": 0, "total": 1600000, "status": "paid" },
+  { "number": "BILL-3006", "date": "2025-09-07", "vendor": "PT Sehat Sentosa", "category": "BPJS", "term": "COD", "dueDate": "2025-09-07", "subtotal": 2600000, "tax": 0, "total": 2600000, "status": "paid" },
+  { "number": "BILL-3007", "date": "2025-09-09", "vendor": "PT Laser Prima", "category": "Maintenance Alat", "term": "30 Hari", "dueDate": "2025-10-09", "subtotal": 5750000, "tax": 575000, "total": 6325000, "status": "open" },
+  { "number": "BILL-3008", "date": "2025-09-10", "vendor": "PT Cleo Water", "category": "Air Minum", "term": "15 Hari", "dueDate": "2025-09-25", "subtotal": 950000, "tax": 0, "total": 950000, "status": "scheduled" },
+  { "number": "BILL-3009", "date": "2025-09-11", "vendor": "PT Transport Andalan", "category": "Transport", "term": "30 Hari", "dueDate": "2025-10-11", "subtotal": 1850000, "tax": 0, "total": 1850000, "status": "open" },
+  { "number": "BILL-3010", "date": "2025-09-12", "vendor": "PT Printing Prima", "category": "Printing", "term": "30 Hari", "dueDate": "2025-10-12", "subtotal": 750000, "tax": 0, "total": 750000, "status": "open" },
+  { "number": "BILL-3011", "date": "2025-09-14", "vendor": "PT Snack Bahagia", "category": "Snack Meeting", "term": "15 Hari", "dueDate": "2025-09-29", "subtotal": 530000, "tax": 0, "total": 530000, "status": "scheduled" },
+  { "number": "BILL-3012", "date": "2025-09-15", "vendor": "PT Konsultan Pajak", "category": "Jasa Profesional", "term": "30 Hari", "dueDate": "2025-10-15", "subtotal": 3200000, "tax": 320000, "total": 3520000, "status": "open" }
+]
+

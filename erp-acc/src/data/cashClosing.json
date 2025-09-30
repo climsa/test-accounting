@@ -1,0 +1,15 @@
+[
+  { "date": "2025-09-12", "outlet": "Klinik A", "opening": 5000000, "sales": 3250000, "cashCount": 8260000, "difference": 1000, "status": "over", "notes": "Tip pelanggan" },
+  { "date": "2025-09-12", "outlet": "Klinik B", "opening": 3500000, "sales": 2150000, "cashCount": 5650000, "difference": 0, "status": "balanced", "notes": "Setor ke bank besok" },
+  { "date": "2025-09-13", "outlet": "Klinik A", "opening": 5000000, "sales": 3400000, "cashCount": 8390000, "difference": -1000, "status": "short", "notes": "Periksa voucher 203" },
+  { "date": "2025-09-13", "outlet": "Klinik B", "opening": 3500000, "sales": 2250000, "cashCount": 5750000, "difference": 0, "status": "balanced", "notes": "" },
+  { "date": "2025-09-14", "outlet": "Klinik A", "opening": 5000000, "sales": 3560000, "cashCount": 8540000, "difference": 0, "status": "balanced", "notes": "" },
+  { "date": "2025-09-14", "outlet": "Klinik B", "opening": 3500000, "sales": 2320000, "cashCount": 5815000, "difference": -5000, "status": "short", "notes": "Split payment salah" },
+  { "date": "2025-09-15", "outlet": "Klinik A", "opening": 5000000, "sales": 3680000, "cashCount": 8680000, "difference": 0, "status": "balanced", "notes": "" },
+  { "date": "2025-09-15", "outlet": "Klinik B", "opening": 3500000, "sales": 2400000, "cashCount": 5895000, "difference": -500, "status": "short", "notes": "Periksa deposit" },
+  { "date": "2025-09-16", "outlet": "Klinik A", "opening": 5000000, "sales": 3720000, "cashCount": 8720000, "difference": 0, "status": "balanced", "notes": "" },
+  { "date": "2025-09-16", "outlet": "Klinik B", "opening": 3500000, "sales": 2450000, "cashCount": 5950000, "difference": 0, "status": "balanced", "notes": "" },
+  { "date": "2025-09-17", "outlet": "Klinik A", "opening": 5000000, "sales": 3800000, "cashCount": 8810000, "difference": 1000, "status": "over", "notes": "Pembulatan" },
+  { "date": "2025-09-17", "outlet": "Klinik B", "opening": 3500000, "sales": 2550000, "cashCount": 6055000, "difference": 500, "status": "over", "notes": "Tip" }
+]
+

@@ -1,0 +1,15 @@
+[
+  { "code": "DEP-001", "date": "2025-09-01", "customer": "Rina Putri", "type": "Deposit", "amount": 5000000, "balance": 3000000, "expiry": "2026-09-01", "status": "active" },
+  { "code": "DEP-002", "date": "2025-09-02", "customer": "Sinta Amelia", "type": "Gift Card", "amount": 1500000, "balance": 1500000, "expiry": "2025-12-31", "status": "unused" },
+  { "code": "DEP-003", "date": "2025-09-03", "customer": "Maya Dewi", "type": "Deposit", "amount": 3000000, "balance": 1500000, "expiry": "2026-03-03", "status": "active" },
+  { "code": "DEP-004", "date": "2025-09-04", "customer": "Ayu Lestari", "type": "Voucher", "amount": 1000000, "balance": 250000, "expiry": "2025-11-30", "status": "active" },
+  { "code": "DEP-005", "date": "2025-09-06", "customer": "Gita Prameswari", "type": "Deposit", "amount": 6000000, "balance": 6000000, "expiry": "2026-09-06", "status": "active" },
+  { "code": "DEP-006", "date": "2025-09-08", "customer": "Nadya Arini", "type": "Gift Card", "amount": 2000000, "balance": 1800000, "expiry": "2025-12-31", "status": "active" },
+  { "code": "DEP-007", "date": "2025-09-10", "customer": "Putri Andien", "type": "Deposit", "amount": 3500000, "balance": 2000000, "expiry": "2026-02-10", "status": "active" },
+  { "code": "DEP-008", "date": "2025-09-12", "customer": "Dina Laras", "type": "Voucher", "amount": 1200000, "balance": 400000, "expiry": "2025-11-12", "status": "active" },
+  { "code": "DEP-009", "date": "2025-09-14", "customer": "Rahma Sari", "type": "Deposit", "amount": 4500000, "balance": 4500000, "expiry": "2026-09-14", "status": "active" },
+  { "code": "DEP-010", "date": "2025-09-15", "customer": "Mega Kusuma", "type": "Gift Card", "amount": 1500000, "balance": 1300000, "expiry": "2026-01-15", "status": "active" },
+  { "code": "DEP-011", "date": "2025-09-17", "customer": "Fifi Utami", "type": "Deposit", "amount": 2800000, "balance": 500000, "expiry": "2026-09-17", "status": "active" },
+  { "code": "DEP-012", "date": "2025-09-19", "customer": "Laras Wulandari", "type": "Voucher", "amount": 900000, "balance": 900000, "expiry": "2025-12-19", "status": "unused" }
+]
+

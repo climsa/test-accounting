@@ -1,0 +1,15 @@
+[
+  { "id": "DUAL-001", "date": "2025-09-01", "statAccount": "1-120", "altAccount": "ALT-1-120", "description": "Kas masuk clinic", "amount": 12500000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-002", "date": "2025-09-02", "statAccount": "4-100", "altAccount": "ALT-4-100", "description": "Pendapatan paket acne", "amount": 12500000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-003", "date": "2025-09-05", "statAccount": "6-019", "altAccount": "ALT-6-019", "description": "Biaya listrik", "amount": 2100000, "overlay": "off", "auditor": "M. Control", "status": "needs-review" },
+  { "id": "DUAL-004", "date": "2025-09-07", "statAccount": "5-100", "altAccount": "ALT-5-100", "description": "Biaya iklan marketplace", "amount": 6000000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-005", "date": "2025-09-10", "statAccount": "6-033", "altAccount": "ALT-6-033", "description": "Akrual pajak karyawan", "amount": 16500000, "overlay": "on", "auditor": "M. Control", "status": "synced" },
+  { "id": "DUAL-006", "date": "2025-09-12", "statAccount": "6-037", "altAccount": "ALT-6-037", "description": "Penyusutan peralatan", "amount": 8500000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-007", "date": "2025-09-13", "statAccount": "1-160", "altAccount": "ALT-1-160", "description": "Piutang afiliasi I7N", "amount": 4200000, "overlay": "off", "auditor": "M. Control", "status": "resync" },
+  { "id": "DUAL-008", "date": "2025-09-15", "statAccount": "2-040", "altAccount": "ALT-2-040", "description": "PPH 21", "amount": 1750000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-009", "date": "2025-09-16", "statAccount": "7-110", "altAccount": "ALT-7-110", "description": "Pendapatan bunga", "amount": 350000, "overlay": "off", "auditor": "Internal", "status": "needs-review" },
+  { "id": "DUAL-010", "date": "2025-09-18", "statAccount": "2-030", "altAccount": "ALT-2-030", "description": "Pendapatan diterima dimuka", "amount": 1500000, "overlay": "on", "auditor": "Internal", "status": "synced" },
+  { "id": "DUAL-011", "date": "2025-09-19", "statAccount": "6-038", "altAccount": "ALT-6-038", "description": "Penyusutan kendaraan", "amount": 7200000, "overlay": "on", "auditor": "C. Auditor", "status": "synced" },
+  { "id": "DUAL-012", "date": "2025-09-21", "statAccount": "6-052", "altAccount": "ALT-6-052", "description": "Staff refreshment", "amount": 2600000, "overlay": "off", "auditor": "M. Control", "status": "needs-review" }
+]
+

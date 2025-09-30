@@ -1,0 +1,15 @@
+[
+  { "type": "box", "name": "PC-A", "linkedAccount": "1-110", "limit": 2500000, "status": "active", "notes": "Klinik A" },
+  { "type": "box", "name": "PC-B", "linkedAccount": "1-110", "limit": 2000000, "status": "active", "notes": "Klinik B" },
+  { "type": "box", "name": "PC-D", "linkedAccount": "1-110", "limit": 3000000, "status": "active", "notes": "Head Office" },
+  { "type": "category", "name": "Transport", "linkedAccount": "6-022", "limit": 300000, "status": "active", "notes": "Biaya transport harian" },
+  { "type": "category", "name": "Pantry", "linkedAccount": "6-024", "limit": 200000, "status": "active", "notes": "Snack/Minum" },
+  { "type": "category", "name": "Consumables", "linkedAccount": "6-028", "limit": 250000, "status": "active", "notes": "Peralatan kecil" },
+  { "type": "category", "name": "Maintenance", "linkedAccount": "6-030", "limit": 400000, "status": "active", "notes": "Perbaikan ringan" },
+  { "type": "category", "name": "Office Supplies", "linkedAccount": "6-012", "limit": 250000, "status": "active", "notes": "ATK" },
+  { "type": "category", "name": "Training", "linkedAccount": "6-053", "limit": 500000, "status": "active", "notes": "Pelatihan internal" },
+  { "type": "category", "name": "Entertainment", "linkedAccount": "5-110", "limit": 300000, "status": "active", "notes": "CSR / tamu" },
+  { "type": "category", "name": "Security", "linkedAccount": "6-027", "limit": 150000, "status": "active", "notes": "Jasa keamanan" },
+  { "type": "category", "name": "Others", "linkedAccount": "6-028", "limit": 150000, "status": "active", "notes": "Lain-lain" }
+]
+

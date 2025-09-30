@@ -1,0 +1,18 @@
+[
+  { "section": "Arus Kas dari Aktivitas Operasi", "items": [
+      { "label": "Penerimaan dari pelanggan", "amount": 49200000 },
+      { "label": "Pembayaran kepada pemasok", "amount": -25600000 },
+      { "label": "Pembayaran gaji", "amount": -48000000 },
+      { "label": "Pembayaran pajak", "amount": -3500000 },
+      { "label": "Penerimaan pendapatan bunga", "amount": 350000 }
+    ], "net": -2325000 },
+  { "section": "Arus Kas dari Aktivitas Investasi", "items": [
+      { "label": "Pembelian peralatan klinik", "amount": -8500000 },
+      { "label": "Pembelian perangkat laser", "amount": -7200000 }
+    ], "net": -15700000 },
+  { "section": "Arus Kas dari Aktivitas Pendanaan", "items": [
+      { "label": "Penarikan pinjaman bank", "amount": 15000000 },
+      { "label": "Pembayaran hutang bank", "amount": -7500000 }
+    ], "net": 7500000 }
+]
+
