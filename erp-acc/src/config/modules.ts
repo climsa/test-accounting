@@ -1,59 +1,59 @@
-import dashboard from "@/data/dashboard.json"
-import glJournals from "@/data/glJournals.json"
-import glRecurring from "@/data/glRecurring.json"
-import glDual from "@/data/glDual.json"
-import glClose from "@/data/glClose.json"
-import arInvoices from "@/data/arInvoices.json"
-import arReceipts from "@/data/arReceipts.json"
-import arDeposits from "@/data/arDeposits.json"
-import arPackages from "@/data/arPackages.json"
-import apBills from "@/data/apBills.json"
-import apPayments from "@/data/apPayments.json"
-import bankAccounts from "@/data/bankAccounts.json"
-import bankReco from "@/data/bankReco.json"
-import bankClearing from "@/data/bankClearing.json"
-import cashClosing from "@/data/cashClosing.json"
-import pettyBoxes from "@/data/pettyBoxes.json"
-import pettyVouchers from "@/data/pettyVouchers.json"
-import pettyTopup from "@/data/pettyTopup.json"
-import inventoryCogs from "@/data/inventoryCogs.json"
-import inventoryGrni from "@/data/inventoryGrni.json"
-import inventoryLots from "@/data/inventoryLots.json"
-import taxCodes from "@/data/taxCodes.json"
-import docNumbering from "@/data/docNumbering.json"
-import coa from "@/data/coa.json"
-import parties from "@/data/parties.json"
-import banksChannels from "@/data/banksChannels.json"
-import pettyMaster from "@/data/pettyMaster.json"
-import approvals from "@/data/approvals.json"
-import dimensions from "@/data/dimensions.json"
-import trialBalance from "@/data/reports/trialBalance.json"
-import profitLoss from "@/data/reports/profitLoss.json"
-import retainedEarnings from "@/data/reports/retainedEarnings.json"
-import balanceSheet from "@/data/reports/balanceSheet.json"
-import cashflowDirect from "@/data/reports/cashflowDirect.json"
-import cashflowIndirect from "@/data/reports/cashflowIndirect.json"
+import dashboard from "@/data/dashboard.json";
+import glJournals from "@/data/glJournals.json";
+import glRecurring from "@/data/glRecurring.json";
+import glDual from "@/data/glDual.json";
+import glClose from "@/data/glClose.json";
+import arInvoices from "@/data/arInvoices.json";
+import arReceipts from "@/data/arReceipts.json";
+import arDeposits from "@/data/arDeposits.json";
+import arPackages from "@/data/arPackages.json";
+import apBills from "@/data/apBills.json";
+import apPayments from "@/data/apPayments.json";
+import bankAccounts from "@/data/bankAccounts.json";
+import bankReco from "@/data/bankReco.json";
+import bankClearing from "@/data/bankClearing.json";
+import cashClosing from "@/data/cashClosing.json";
+import pettyBoxes from "@/data/pettyBoxes.json";
+import pettyVouchers from "@/data/pettyVouchers.json";
+import pettyTopup from "@/data/pettyTopup.json";
+import inventoryCogs from "@/data/inventoryCogs.json";
+import inventoryGrni from "@/data/inventoryGrni.json";
+import inventoryLots from "@/data/inventoryLots.json";
+import taxCodes from "@/data/taxCodes.json";
+import docNumbering from "@/data/docNumbering.json";
+import coa from "@/data/coa.json";
+import parties from "@/data/parties.json";
+import banksChannels from "@/data/banksChannels.json";
+import pettyMaster from "@/data/pettyMaster.json";
+import approvals from "@/data/approvals.json";
+import dimensions from "@/data/dimensions.json";
+import trialBalance from "@/data/reports/trialBalance.json";
+import profitLoss from "@/data/reports/profitLoss.json";
+import retainedEarnings from "@/data/reports/retainedEarnings.json";
+import balanceSheet from "@/data/reports/balanceSheet.json";
+import cashflowDirect from "@/data/reports/cashflowDirect.json";
+import cashflowIndirect from "@/data/reports/cashflowIndirect.json";
 
-import type { ModuleConfig } from "@/components/modules/ModuleScreen"
-import { statusBadge } from "@/components/modules/ModuleScreen"
-
-const currency = (value: unknown) =>
-  typeof value === "number"
-    ? value.toLocaleString("id-ID", { minimumFractionDigits: 0 })
-    : String(value ?? "")
+import type { ModuleConfig } from "@/components/modules/ModuleScreen";
 
 const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
   "gl/journals": {
     title: "General Ledger • Journals",
-    description: "Daftar jurnal umum dengan status draft/posted/void dan validasi debit kredit.",
+    description:
+      "Daftar jurnal umum dengan status draft/posted/void dan validasi debit kredit.",
     data: glJournals,
     columns: [
       { key: "id", header: "No. Jurnal" },
       { key: "date", header: "Tanggal" },
       { key: "description", header: "Deskripsi" },
-      { key: "debit", header: "Debit", align: "right", render: (row) => currency(row.debit) },
-      { key: "credit", header: "Kredit", align: "right", render: (row) => currency(row.credit) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "debit", header: "Debit", align: "right", renderType: "currency" },
+      {
+        key: "credit",
+        header: "Kredit",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "id", label: "No. Jurnal" },
@@ -61,8 +61,8 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "description", label: "Deskripsi" },
       { name: "debitAccount", label: "Akun Debit" },
       { name: "creditAccount", label: "Akun Kredit" },
-      { name: "debit", label: "Debit", format: currency },
-      { name: "credit", label: "Kredit", format: currency },
+      { name: "debit", label: "Debit", formatType: "currency" },
+      { name: "credit", label: "Kredit", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
@@ -83,17 +83,14 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "creditAccount", label: "Akun Kredit" },
         { name: "debit", label: "Nilai Debit", type: "number" },
         { name: "credit", label: "Nilai Kredit", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["draft", "posted", "void"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["draft", "posted", "void"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof glJournals[number],
-      validate: (values) => {
-        const debit = Number(values.debit ?? 0)
-        const credit = Number(values.credit ?? 0)
-        if (debit !== credit) {
-          return "Debit dan kredit harus seimbang."
-        }
-        return null
-      },
+      validateType: "balanceDebitCredit",
     },
   },
 
@@ -107,7 +104,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "statAccount", header: "STAT" },
       { key: "altAccount", header: "ALT" },
       { key: "overlay", header: "Overlay" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "id", label: "ID" },
@@ -121,8 +118,16 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Resync", intent: "mock", message: "Dual journal disinkronkan ulang (mock)." },
-      { label: "Audit Trail", intent: "mock", message: "Audit trail ditampilkan (mock)." },
+      {
+        label: "Resync",
+        intent: "mock",
+        message: "Dual journal disinkronkan ulang (mock).",
+      },
+      {
+        label: "Audit Trail",
+        intent: "mock",
+        message: "Audit trail ditampilkan (mock).",
+      },
     ],
     form: {
       title: "Dual Journal",
@@ -131,11 +136,20 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "date", label: "Tanggal", type: "date" },
         { name: "statAccount", label: "Akun STAT" },
         { name: "altAccount", label: "Akun ALT" },
-        { name: "overlay", label: "Overlay", type: "select", options: ["on", "off"] },
+        {
+          name: "overlay",
+          label: "Overlay",
+          type: "select",
+          options: ["on", "off"],
+        },
         { name: "auditor", label: "Auditor" },
-        { name: "status", label: "Status", type: "select", options: ["synced", "needs-review", "resync"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["synced", "needs-review", "resync"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof glDual[number],
     },
   },
 
@@ -148,7 +162,12 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "type", header: "Tipe" },
       { key: "frequency", header: "Frekuensi" },
       { key: "nextRun", header: "Eksekusi Berikutnya" },
-      { key: "amount", header: "Nominal", align: "right", render: (row) => currency(row.amount) },
+      {
+        key: "amount",
+        header: "Nominal",
+        align: "right",
+        renderType: "currency",
+      },
       { key: "status", header: "Status" },
     ],
     detailFields: [
@@ -156,7 +175,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "type", label: "Tipe" },
       { name: "frequency", label: "Frekuensi" },
       { name: "nextRun", label: "Berikutnya" },
-      { name: "amount", label: "Nominal", format: currency },
+      { name: "amount", label: "Nominal", formatType: "currency" },
       { name: "debitAccount", label: "Akun Debit" },
       { name: "creditAccount", label: "Akun Kredit" },
       { name: "status", label: "Status" },
@@ -165,21 +184,39 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
       { label: "Preview", intent: "mock", message: "Preview jurnal (mock)." },
-      { label: "Schedule", intent: "mock", message: "Scheduler diperbarui (mock)." },
+      {
+        label: "Schedule",
+        intent: "mock",
+        message: "Scheduler diperbarui (mock).",
+      },
     ],
     form: {
       title: "Template Jurnal",
       fields: [
         { name: "template", label: "Nama Template" },
-        { name: "type", label: "Tipe", type: "select", options: ["recurring", "reversing"] },
-        { name: "frequency", label: "Frekuensi", type: "select", options: ["Harian", "Mingguan", "Bulanan", "Triwulanan", "Tahunan"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["recurring", "reversing"],
+        },
+        {
+          name: "frequency",
+          label: "Frekuensi",
+          type: "select",
+          options: ["Harian", "Mingguan", "Bulanan", "Triwulanan", "Tahunan"],
+        },
         { name: "nextRun", label: "Eksekusi Berikutnya", type: "date" },
         { name: "debitAccount", label: "Akun Debit" },
         { name: "creditAccount", label: "Akun Kredit" },
         { name: "amount", label: "Nominal", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["active", "scheduled"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "scheduled"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof glRecurring[number],
     },
   },
 
@@ -189,7 +226,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     data: glClose,
     columns: [
       { key: "period", header: "Periode" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
       { key: "openDate", header: "Tanggal Buka" },
       { key: "closeDate", header: "Tanggal Tutup" },
       { key: "owner", header: "PIC" },
@@ -200,14 +237,22 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "openDate", label: "Tanggal Buka" },
       { name: "closeDate", label: "Tanggal Tutup" },
       { name: "owner", label: "PIC" },
-      { name: "checklist", label: "Checklist", format: (value) => Array.isArray(value) ? value.join(", ") : String(value ?? "") },
+      { name: "checklist", label: "Checklist", formatType: "array" },
       { name: "notes", label: "Catatan" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Checklist", intent: "mock", message: "Checklist diperbarui (mock)." },
+      {
+        label: "Checklist",
+        intent: "mock",
+        message: "Checklist diperbarui (mock).",
+      },
       { label: "Lock", intent: "mock", message: "Periode dikunci (mock)." },
-      { label: "Reopen", intent: "mock", message: "Periode dibuka kembali (mock)." },
+      {
+        label: "Reopen",
+        intent: "mock",
+        message: "Periode dibuka kembali (mock).",
+      },
     ],
     form: {
       title: "Closing Periode",
@@ -216,24 +261,29 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "openDate", label: "Tanggal Buka", type: "date" },
         { name: "closeDate", label: "Tanggal Tutup", type: "date" },
         { name: "owner", label: "PIC" },
-        { name: "status", label: "Status", type: "select", options: ["in-progress", "closed", "archived"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["in-progress", "closed", "archived"],
+        },
         { name: "notes", label: "Catatan", type: "textarea" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof glClose[number],
     },
   },
 
   "ar/invoices": {
     title: "Sales (AR) • Invoices & Credit Notes",
-    description: "Tagihan penjualan jasa/produk klinik beserta status pembayaran.",
+    description:
+      "Tagihan penjualan jasa/produk klinik beserta status pembayaran.",
     data: arInvoices,
     columns: [
       { key: "number", header: "No. Invoice" },
       { key: "date", header: "Tanggal" },
       { key: "customer", header: "Pelanggan" },
       { key: "treatment", header: "Paket/Treatment" },
-      { key: "total", header: "Total", align: "right", render: (row) => currency(row.total) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "total", header: "Total", align: "right", renderType: "currency" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "number", label: "No. Invoice" },
@@ -242,17 +292,25 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "treatment", label: "Treatment" },
       { name: "term", label: "Termin" },
       { name: "dueDate", label: "Jatuh Tempo" },
-      { name: "subtotal", label: "Subtotal", format: currency },
-      { name: "discount", label: "Diskon", format: currency },
-      { name: "tax", label: "Pajak", format: currency },
-      { name: "total", label: "Total", format: currency },
+      { name: "subtotal", label: "Subtotal", formatType: "currency" },
+      { name: "discount", label: "Diskon", formatType: "currency" },
+      { name: "tax", label: "Pajak", formatType: "currency" },
+      { name: "total", label: "Total", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Receive Payment", intent: "mock", message: "Penerimaan pembayaran dibuat (mock)." },
-      { label: "Issue CN", intent: "mock", message: "Credit note dibuat (mock)." },
+      {
+        label: "Receive Payment",
+        intent: "mock",
+        message: "Penerimaan pembayaran dibuat (mock).",
+      },
+      {
+        label: "Issue CN",
+        intent: "mock",
+        message: "Credit note dibuat (mock).",
+      },
       { label: "Print", intent: "mock", message: "Invoice dicetak (mock)." },
       { label: "Export", intent: "mock", message: "Invoice diekspor (mock)." },
     ],
@@ -263,15 +321,24 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "date", label: "Tanggal", type: "date" },
         { name: "customer", label: "Pelanggan" },
         { name: "treatment", label: "Treatment" },
-        { name: "term", label: "Termin", type: "select", options: ["COD", "15 Hari", "30 Hari", "45 Hari"] },
+        {
+          name: "term",
+          label: "Termin",
+          type: "select",
+          options: ["COD", "15 Hari", "30 Hari", "45 Hari"],
+        },
         { name: "dueDate", label: "Jatuh Tempo", type: "date" },
         { name: "subtotal", label: "Subtotal", type: "number" },
         { name: "discount", label: "Diskon", type: "number" },
         { name: "tax", label: "Pajak", type: "number" },
         { name: "total", label: "Total", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["open", "paid", "overdue"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["open", "paid", "overdue"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof arInvoices[number],
     },
   },
 
@@ -284,8 +351,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "customer", header: "Pelanggan" },
       { key: "method", header: "Metode" },
-      { key: "amount", header: "Jumlah", align: "right", render: (row) => currency(row.amount) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "amount",
+        header: "Jumlah",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "receipt", label: "No. Penerimaan" },
@@ -294,15 +366,23 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "method", label: "Metode" },
       { name: "reference", label: "Referensi" },
       { name: "invoice", label: "Invoice" },
-      { name: "amount", label: "Jumlah", format: currency },
-      { name: "fee", label: "Biaya Channel", format: currency },
+      { name: "amount", label: "Jumlah", formatType: "currency" },
+      { name: "fee", label: "Biaya Channel", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Split", intent: "mock", message: "Split payment dibuat (mock)." },
-      { label: "Clear", intent: "mock", message: "Penerimaan diclosed (mock)." },
+      {
+        label: "Split",
+        intent: "mock",
+        message: "Split payment dibuat (mock).",
+      },
+      {
+        label: "Clear",
+        intent: "mock",
+        message: "Penerimaan diclosed (mock).",
+      },
     ],
     form: {
       title: "Penerimaan",
@@ -310,14 +390,23 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "receipt", label: "No. Penerimaan" },
         { name: "date", label: "Tanggal", type: "date" },
         { name: "customer", label: "Pelanggan" },
-        { name: "method", label: "Metode", type: "select", options: ["Cash", "Transfer", "EDC", "e-Wallet", "Deposit", "Points"] },
+        {
+          name: "method",
+          label: "Metode",
+          type: "select",
+          options: ["Cash", "Transfer", "EDC", "e-Wallet", "Deposit", "Points"],
+        },
         { name: "reference", label: "Referensi" },
         { name: "invoice", label: "Invoice" },
         { name: "amount", label: "Jumlah", type: "number" },
         { name: "fee", label: "Biaya Channel", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["posted", "partial", "void"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["posted", "partial", "void"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof arReceipts[number],
     },
   },
 
@@ -330,17 +419,27 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "customer", header: "Pelanggan" },
       { key: "type", header: "Tipe" },
-      { key: "amount", header: "Nilai", align: "right", render: (row) => currency(row.amount) },
-      { key: "balance", header: "Saldo", align: "right", render: (row) => currency(row.balance) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "amount",
+        header: "Nilai",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "balance",
+        header: "Saldo",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "code", label: "Nomor" },
       { name: "date", label: "Tanggal" },
       { name: "customer", label: "Pelanggan" },
       { name: "type", label: "Tipe" },
-      { name: "amount", label: "Nilai", format: currency },
-      { name: "balance", label: "Saldo", format: currency },
+      { name: "amount", label: "Nilai", formatType: "currency" },
+      { name: "balance", label: "Saldo", formatType: "currency" },
       { name: "expiry", label: "Kadaluarsa" },
       { name: "status", label: "Status" },
     ],
@@ -355,27 +454,37 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "code", label: "Nomor" },
         { name: "date", label: "Tanggal", type: "date" },
         { name: "customer", label: "Pelanggan" },
-        { name: "type", label: "Tipe", type: "select", options: ["Deposit", "Gift Card", "Voucher"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["Deposit", "Gift Card", "Voucher"],
+        },
         { name: "amount", label: "Nilai", type: "number" },
         { name: "balance", label: "Saldo", type: "number" },
         { name: "expiry", label: "Kadaluarsa", type: "date" },
-        { name: "status", label: "Status", type: "select", options: ["active", "unused", "hangus"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "unused", "hangus"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof arDeposits[number],
     },
   },
 
   "ar/packages": {
     title: "Sales (AR) • Packages & Memberships",
-    description: "Pengelolaan paket, membership, deferred revenue, dan channel penjualan.",
+    description:
+      "Pengelolaan paket, membership, deferred revenue, dan channel penjualan.",
     data: arPackages,
     columns: [
       { key: "code", header: "Kode" },
       { key: "name", header: "Nama Paket" },
       { key: "type", header: "Jenis" },
-      { key: "price", header: "Harga", align: "right", render: (row) => currency(row.price) },
+      { key: "price", header: "Harga", align: "right", renderType: "currency" },
       { key: "sessions", header: "Sesi" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "code", label: "Kode" },
@@ -383,7 +492,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "type", label: "Jenis" },
       { name: "sessions", label: "Jumlah Sesi" },
       { name: "durationMonths", label: "Durasi (bulan)" },
-      { name: "price", label: "Harga", format: currency },
+      { name: "price", label: "Harga", formatType: "currency" },
       { name: "channel", label: "Channel" },
       { name: "deferred", label: "Deferred?" },
       { name: "status", label: "Status" },
@@ -391,23 +500,45 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Activate", intent: "mock", message: "Paket diaktifkan (mock)." },
-      { label: "Schedule", intent: "mock", message: "Jadwal redemption diatur (mock)." },
+      {
+        label: "Activate",
+        intent: "mock",
+        message: "Paket diaktifkan (mock).",
+      },
+      {
+        label: "Schedule",
+        intent: "mock",
+        message: "Jadwal redemption diatur (mock).",
+      },
     ],
     form: {
       title: "Paket/Membership",
       fields: [
         { name: "code", label: "Kode" },
         { name: "name", label: "Nama" },
-        { name: "type", label: "Jenis", type: "select", options: ["Treatment", "Produk", "Membership", "Bundle"] },
+        {
+          name: "type",
+          label: "Jenis",
+          type: "select",
+          options: ["Treatment", "Produk", "Membership", "Bundle"],
+        },
         { name: "sessions", label: "Jumlah Sesi", type: "number" },
         { name: "durationMonths", label: "Durasi (bulan)", type: "number" },
         { name: "price", label: "Harga", type: "number" },
-        { name: "deferred", label: "Deferred", type: "select", options: ["true", "false"] },
+        {
+          name: "deferred",
+          label: "Deferred",
+          type: "select",
+          options: ["true", "false"],
+        },
         { name: "channel", label: "Channel" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof arPackages[number],
     },
   },
 
@@ -420,8 +551,8 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "vendor", header: "Vendor" },
       { key: "category", header: "Kategori" },
-      { key: "total", header: "Total", align: "right", render: (row) => currency(row.total) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "total", header: "Total", align: "right", renderType: "currency" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "number", label: "No. Bill" },
@@ -430,16 +561,24 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "category", label: "Kategori" },
       { name: "term", label: "Termin" },
       { name: "dueDate", label: "Jatuh Tempo" },
-      { name: "subtotal", label: "Subtotal", format: currency },
-      { name: "tax", label: "Pajak", format: currency },
-      { name: "total", label: "Total", format: currency },
+      { name: "subtotal", label: "Subtotal", formatType: "currency" },
+      { name: "tax", label: "Pajak", formatType: "currency" },
+      { name: "total", label: "Total", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Schedule Payment", intent: "mock", message: "Pembayaran dijadwalkan (mock)." },
-      { label: "Attach", intent: "mock", message: "Lampiran ditambahkan (mock)." },
+      {
+        label: "Schedule Payment",
+        intent: "mock",
+        message: "Pembayaran dijadwalkan (mock).",
+      },
+      {
+        label: "Attach",
+        intent: "mock",
+        message: "Lampiran ditambahkan (mock).",
+      },
     ],
     form: {
       title: "Bill Vendor",
@@ -448,14 +587,23 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "date", label: "Tanggal", type: "date" },
         { name: "vendor", label: "Vendor" },
         { name: "category", label: "Kategori" },
-        { name: "term", label: "Termin", type: "select", options: ["COD", "30 Hari", "45 Hari"] },
+        {
+          name: "term",
+          label: "Termin",
+          type: "select",
+          options: ["COD", "30 Hari", "45 Hari"],
+        },
         { name: "dueDate", label: "Jatuh Tempo", type: "date" },
         { name: "subtotal", label: "Subtotal", type: "number" },
         { name: "tax", label: "Pajak", type: "number" },
         { name: "total", label: "Total", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["open", "paid", "scheduled", "draft", "overdue"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["open", "paid", "scheduled", "draft", "overdue"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof apBills[number],
     },
   },
 
@@ -468,8 +616,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "vendor", header: "Vendor" },
       { key: "method", header: "Metode" },
-      { key: "amount", header: "Jumlah", align: "right", render: (row) => currency(row.amount) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "amount",
+        header: "Jumlah",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "payment", label: "No. Pembayaran" },
@@ -477,15 +630,23 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "vendor", label: "Vendor" },
       { name: "method", label: "Metode" },
       { name: "reference", label: "Referensi" },
-      { name: "bills", label: "Bill terkait", format: (value) => Array.isArray(value) ? value.join(", ") : String(value ?? "") },
-      { name: "amount", label: "Jumlah", format: currency },
+      { name: "bills", label: "Bill terkait", formatType: "array" },
+      { name: "amount", label: "Jumlah", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Approve", intent: "mock", message: "Pembayaran disetujui (mock)." },
-      { label: "Reject", intent: "mock", message: "Pembayaran ditolak (mock)." },
+      {
+        label: "Approve",
+        intent: "mock",
+        message: "Pembayaran disetujui (mock).",
+      },
+      {
+        label: "Reject",
+        intent: "mock",
+        message: "Pembayaran ditolak (mock).",
+      },
     ],
     form: {
       title: "Payment Voucher",
@@ -493,12 +654,21 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "payment", label: "No. Pembayaran" },
         { name: "date", label: "Tanggal", type: "date" },
         { name: "vendor", label: "Vendor" },
-        { name: "method", label: "Metode", type: "select", options: ["Cash", "Transfer", "Giro", "Virtual Account"] },
+        {
+          name: "method",
+          label: "Metode",
+          type: "select",
+          options: ["Cash", "Transfer", "Giro", "Virtual Account"],
+        },
         { name: "reference", label: "Referensi" },
         { name: "amount", label: "Jumlah", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["pending", "approved", "processed", "scheduled", "partial"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["pending", "approved", "processed", "scheduled", "partial"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof apPayments[number],
     },
   },
 
@@ -511,22 +681,31 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "accountName", header: "Nama Akun" },
       { key: "number", header: "No. Rekening" },
       { key: "currency", header: "Mata Uang" },
-      { key: "balance", header: "Saldo", align: "right", render: (row) => currency(row.balance) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "balance",
+        header: "Saldo",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "bank", label: "Bank" },
       { name: "accountName", label: "Nama Akun" },
       { name: "number", label: "No. Rekening" },
       { name: "currency", label: "Mata Uang" },
-      { name: "balance", label: "Saldo", format: currency },
+      { name: "balance", label: "Saldo", formatType: "currency" },
       { name: "branch", label: "Cabang" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Transfer", intent: "mock", message: "Transfer antar akun dibuat (mock)." },
+      {
+        label: "Transfer",
+        intent: "mock",
+        message: "Transfer antar akun dibuat (mock).",
+      },
     ],
     form: {
       title: "Rekening Bank",
@@ -534,12 +713,21 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "bank", label: "Bank" },
         { name: "accountName", label: "Nama Akun" },
         { name: "number", label: "No. Rekening" },
-        { name: "currency", label: "Mata Uang", type: "select", options: ["IDR", "USD", "SGD"] },
+        {
+          name: "currency",
+          label: "Mata Uang",
+          type: "select",
+          options: ["IDR", "USD", "SGD"],
+        },
         { name: "branch", label: "Cabang" },
         { name: "balance", label: "Saldo", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof bankAccounts[number],
     },
   },
 
@@ -550,24 +738,43 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     columns: [
       { key: "date", header: "Tanggal" },
       { key: "description", header: "Deskripsi" },
-      { key: "bankAmount", header: "Mutasi Bank", align: "right", render: (row) => currency(row.bankAmount) },
-      { key: "bookAmount", header: "Catatan Buku", align: "right", render: (row) => currency(row.bookAmount) },
-      { key: "difference", header: "Selisih", align: "right", render: (row) => currency(row.difference) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "bankAmount",
+        header: "Mutasi Bank",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "bookAmount",
+        header: "Catatan Buku",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "difference",
+        header: "Selisih",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "date", label: "Tanggal" },
       { name: "description", label: "Deskripsi" },
-      { name: "bankAmount", label: "Mutasi Bank", format: currency },
-      { name: "bookAmount", label: "Nilai Buku", format: currency },
-      { name: "difference", label: "Selisih", format: currency },
+      { name: "bankAmount", label: "Mutasi Bank", formatType: "currency" },
+      { name: "bookAmount", label: "Nilai Buku", formatType: "currency" },
+      { name: "difference", label: "Selisih", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Match", intent: "mock", message: "Mutasi dimatching (mock)." },
       { label: "Unmatch", intent: "mock", message: "Mutasi dilepas (mock)." },
-      { label: "Post Fee", intent: "mock", message: "Fee bank diposting (mock)." },
+      {
+        label: "Post Fee",
+        intent: "mock",
+        message: "Fee bank diposting (mock).",
+      },
     ],
     form: {
       title: "Aturan Matching",
@@ -575,9 +782,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "description", label: "Kata Kunci" },
         { name: "bankAmount", label: "Mutasi Bank", type: "number" },
         { name: "bookAmount", label: "Nilai Buku", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["matched", "unmatched"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["matched", "unmatched"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof bankReco[number],
     },
   },
 
@@ -589,19 +800,19 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "channel", header: "Channel" },
       { key: "batchDate", header: "Batch" },
       { key: "transactions", header: "Txn" },
-      { key: "gross", header: "Gross", align: "right", render: (row) => currency(row.gross) },
-      { key: "fee", header: "%/Fee", align: "right", render: (row) => currency(row.fee) },
-      { key: "net", header: "Net", align: "right", render: (row) => currency(row.net) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "gross", header: "Gross", align: "right", renderType: "currency" },
+      { key: "fee", header: "%/Fee", align: "right", renderType: "currency" },
+      { key: "net", header: "Net", align: "right", renderType: "currency" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "channel", label: "Channel" },
       { name: "provider", label: "Provider" },
       { name: "batchDate", label: "Batch" },
       { name: "transactions", label: "Transaksi" },
-      { name: "gross", label: "Gross", format: currency },
-      { name: "fee", label: "Fee", format: currency },
-      { name: "net", label: "Net", format: currency },
+      { name: "gross", label: "Gross", formatType: "currency" },
+      { name: "fee", label: "Fee", formatType: "currency" },
+      { name: "net", label: "Net", formatType: "currency" },
       { name: "settlementDay", label: "Settlement" },
       { name: "status", label: "Status" },
     ],
@@ -617,39 +828,67 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "provider", label: "Provider" },
         { name: "settlementDay", label: "Settlement (H+)", type: "number" },
         { name: "fee", label: "Fee", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["cleared", "pending-fee", "pending-clearing"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["cleared", "pending-fee", "pending-clearing"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof bankClearing[number],
     },
   },
 
   "cash/closing": {
     title: "Banking & Cash • Cash Closing Outlet",
-    description: "Kasir harian per outlet, selisih, dan tindak lanjut setor bank.",
+    description:
+      "Kasir harian per outlet, selisih, dan tindak lanjut setor bank.",
     data: cashClosing,
     columns: [
       { key: "date", header: "Tanggal" },
       { key: "outlet", header: "Outlet" },
-      { key: "opening", header: "Kas Awal", align: "right", render: (row) => currency(row.opening) },
-      { key: "cashCount", header: "Kas Fisik", align: "right", render: (row) => currency(row.cashCount) },
-      { key: "difference", header: "Selisih", align: "right", render: (row) => currency(row.difference) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "opening",
+        header: "Kas Awal",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "cashCount",
+        header: "Kas Fisik",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "difference",
+        header: "Selisih",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "date", label: "Tanggal" },
       { name: "outlet", label: "Outlet" },
-      { name: "opening", label: "Kas Awal", format: currency },
-      { name: "sales", label: "Penjualan Shift", format: currency },
-      { name: "cashCount", label: "Kas Fisik", format: currency },
-      { name: "difference", label: "Selisih", format: currency },
+      { name: "opening", label: "Kas Awal", formatType: "currency" },
+      { name: "sales", label: "Penjualan Shift", formatType: "currency" },
+      { name: "cashCount", label: "Kas Fisik", formatType: "currency" },
+      { name: "difference", label: "Selisih", formatType: "currency" },
       { name: "petugas", label: "Petugas" },
       { name: "status", label: "Status" },
       { name: "notes", label: "Catatan" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Investigation", intent: "mock", message: "Selisih ditindaklanjuti (mock)." },
-      { label: "Post", intent: "mock", message: "Cash closing diposting (mock)." },
+      {
+        label: "Investigation",
+        intent: "mock",
+        message: "Selisih ditindaklanjuti (mock).",
+      },
+      {
+        label: "Post",
+        intent: "mock",
+        message: "Cash closing diposting (mock).",
+      },
     ],
     form: {
       title: "Cash Count",
@@ -661,7 +900,6 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "cashCount", label: "Kas Fisik", type: "number" },
         { name: "notes", label: "Catatan", type: "textarea" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof cashClosing[number],
     },
   },
 
@@ -673,22 +911,31 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "code", header: "Kode Box" },
       { key: "custodian", header: "Custodian" },
       { key: "branch", header: "Cabang" },
-      { key: "limit", header: "Limit", align: "right", render: (row) => currency(row.limit) },
-      { key: "balance", header: "Saldo", align: "right", render: (row) => currency(row.balance) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "limit", header: "Limit", align: "right", renderType: "currency" },
+      {
+        key: "balance",
+        header: "Saldo",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "code", label: "Kode" },
       { name: "custodian", label: "Custodian" },
       { name: "branch", label: "Cabang" },
-      { name: "limit", label: "Limit", format: currency },
-      { name: "balance", label: "Saldo", format: currency },
+      { name: "limit", label: "Limit", formatType: "currency" },
+      { name: "balance", label: "Saldo", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Box dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Box dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Imprest Box",
@@ -698,9 +945,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "branch", label: "Cabang" },
         { name: "limit", label: "Limit", type: "number" },
         { name: "balance", label: "Saldo", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof pettyBoxes[number],
     },
   },
 
@@ -713,8 +964,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "box", header: "Box" },
       { key: "category", header: "Kategori" },
-      { key: "amount", header: "Jumlah", align: "right", render: (row) => currency(row.amount) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "amount",
+        header: "Jumlah",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "number", label: "No. Voucher" },
@@ -722,7 +978,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "box", label: "Box" },
       { name: "category", label: "Kategori" },
       { name: "description", label: "Deskripsi" },
-      { name: "amount", label: "Jumlah", format: currency },
+      { name: "amount", label: "Jumlah", formatType: "currency" },
       { name: "attachments", label: "Lampiran" },
       { name: "approval", label: "Approval" },
       { name: "status", label: "Status" },
@@ -730,7 +986,11 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Approve", intent: "mock", message: "Voucher disetujui (mock)." },
+      {
+        label: "Approve",
+        intent: "mock",
+        message: "Voucher disetujui (mock).",
+      },
       { label: "Reject", intent: "mock", message: "Voucher ditolak (mock)." },
     ],
     form: {
@@ -739,14 +999,34 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "number", label: "No. Voucher" },
         { name: "date", label: "Tanggal", type: "date" },
         { name: "box", label: "Box" },
-        { name: "category", label: "Kategori", type: "select", options: ["Transport", "Consumables", "Pantry", "Maintenance", "Others"] },
+        {
+          name: "category",
+          label: "Kategori",
+          type: "select",
+          options: [
+            "Transport",
+            "Consumables",
+            "Pantry",
+            "Maintenance",
+            "Others",
+          ],
+        },
         { name: "description", label: "Deskripsi" },
         { name: "amount", label: "Jumlah", type: "number" },
         { name: "attachments", label: "Lampiran", type: "number" },
-        { name: "approval", label: "Approval", type: "select", options: ["waiting", "approved", "rejected"] },
-        { name: "status", label: "Status", type: "select", options: ["draft", "posted"] },
+        {
+          name: "approval",
+          label: "Approval",
+          type: "select",
+          options: ["waiting", "approved", "rejected"],
+        },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["draft", "posted"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof pettyVouchers[number],
     },
   },
 
@@ -757,26 +1037,54 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     columns: [
       { key: "date", header: "Tanggal" },
       { key: "box", header: "Box" },
-      { key: "topup", header: "Top-up Bank", align: "right", render: (row) => currency(row.topup) },
-      { key: "spend", header: "Pengeluaran", align: "right", render: (row) => currency(row.spend) },
-      { key: "cash", header: "Kas Fisik", align: "right", render: (row) => currency(row.cash) },
-      { key: "difference", header: "Selisih", align: "right", render: (row) => currency(row.difference) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      {
+        key: "topup",
+        header: "Top-up Bank",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "spend",
+        header: "Pengeluaran",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "cash",
+        header: "Kas Fisik",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "difference",
+        header: "Selisih",
+        align: "right",
+        renderType: "currency",
+      },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "date", label: "Tanggal" },
       { name: "box", label: "Box" },
-      { name: "topup", label: "Top-up", format: currency },
-      { name: "spend", label: "Pengeluaran", format: currency },
-      { name: "cash", label: "Kas Fisik", format: currency },
-      { name: "difference", label: "Selisih", format: currency },
+      { name: "topup", label: "Top-up", formatType: "currency" },
+      { name: "spend", label: "Pengeluaran", formatType: "currency" },
+      { name: "cash", label: "Kas Fisik", formatType: "currency" },
+      { name: "difference", label: "Selisih", formatType: "currency" },
       { name: "status", label: "Status" },
       { name: "pic", label: "PIC" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Investigate", intent: "mock", message: "Investigasi selisih dilakukan (mock)." },
-      { label: "Close", intent: "mock", message: "Periode kas kecil ditutup (mock)." },
+      {
+        label: "Investigate",
+        intent: "mock",
+        message: "Investigasi selisih dilakukan (mock).",
+      },
+      {
+        label: "Close",
+        intent: "mock",
+        message: "Periode kas kecil ditutup (mock).",
+      },
     ],
     form: {
       title: "Top-up/Rekon",
@@ -787,23 +1095,38 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "spend", label: "Pengeluaran", type: "number" },
         { name: "cash", label: "Kas Fisik", type: "number" },
         { name: "difference", label: "Selisih", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["closed", "investigate"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["closed", "investigate"],
+        },
         { name: "pic", label: "PIC" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof pettyTopup[number],
     },
   },
 
   "inventory/cogs": {
     title: "Inventory Hooks • COGS Engine",
-    description: "Konfigurasi metode COGS (FIFO/Average) untuk skincare/treatment.",
+    description:
+      "Konfigurasi metode COGS (FIFO/Average) untuk skincare/treatment.",
     data: inventoryCogs,
     columns: [
       { key: "sku", header: "SKU" },
       { key: "name", header: "Nama Produk" },
       { key: "method", header: "Metode" },
-      { key: "lastCost", header: "Biaya Terakhir", align: "right", render: (row) => currency(row.lastCost) },
-      { key: "averageCost", header: "Biaya Rata", align: "right", render: (row) => currency(row.averageCost) },
+      {
+        key: "lastCost",
+        header: "Biaya Terakhir",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "averageCost",
+        header: "Biaya Rata",
+        align: "right",
+        renderType: "currency",
+      },
       { key: "backflush", header: "Backflush" },
       { key: "status", header: "Status" },
     ],
@@ -811,28 +1134,46 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "sku", label: "SKU" },
       { name: "name", label: "Nama Produk" },
       { name: "method", label: "Metode" },
-      { name: "lastCost", label: "Biaya Terakhir", format: currency },
-      { name: "averageCost", label: "Biaya Rata", format: currency },
+      { name: "lastCost", label: "Biaya Terakhir", formatType: "currency" },
+      { name: "averageCost", label: "Biaya Rata", formatType: "currency" },
       { name: "backflush", label: "Backflush" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Simulate", intent: "mock", message: "Simulasi COGS dihitung (mock)." },
+      {
+        label: "Simulate",
+        intent: "mock",
+        message: "Simulasi COGS dihitung (mock).",
+      },
     ],
     form: {
       title: "COGS Engine",
       fields: [
         { name: "sku", label: "SKU" },
         { name: "name", label: "Nama" },
-        { name: "method", label: "Metode", type: "select", options: ["FIFO", "Average"] },
+        {
+          name: "method",
+          label: "Metode",
+          type: "select",
+          options: ["FIFO", "Average"],
+        },
         { name: "lastCost", label: "Biaya Terakhir", type: "number" },
         { name: "averageCost", label: "Biaya Rata", type: "number" },
-        { name: "backflush", label: "Backflush", type: "select", options: ["true", "false"] },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "backflush",
+          label: "Backflush",
+          type: "select",
+          options: ["true", "false"],
+        },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof inventoryCogs[number],
     },
   },
 
@@ -845,8 +1186,8 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "date", header: "Tanggal" },
       { key: "vendor", header: "Vendor" },
       { key: "warehouse", header: "Gudang" },
-      { key: "value", header: "Nilai", align: "right", render: (row) => currency(row.value) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "value", header: "Nilai", align: "right", renderType: "currency" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "grn", label: "GRN" },
@@ -854,7 +1195,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "vendor", label: "Vendor" },
       { name: "warehouse", label: "Gudang" },
       { name: "items", label: "Jumlah Item" },
-      { name: "value", label: "Nilai", format: currency },
+      { name: "value", label: "Nilai", formatType: "currency" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
@@ -871,9 +1212,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "warehouse", label: "Gudang" },
         { name: "items", label: "Jumlah Item", type: "number" },
         { name: "value", label: "Nilai", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["open", "posted", "pending-adjust"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["open", "posted", "pending-adjust"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof inventoryGrni[number],
     },
   },
 
@@ -886,7 +1231,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "lot", header: "Lot" },
       { key: "expiry", header: "Kadaluarsa" },
       { key: "quantity", header: "Qty" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "sku", label: "SKU" },
@@ -899,7 +1244,11 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Hold", intent: "mock", message: "Lot di-hold (mock)." },
-      { label: "Write-off", intent: "mock", message: "Lot di-write off (mock)." },
+      {
+        label: "Write-off",
+        intent: "mock",
+        message: "Lot di-write off (mock).",
+      },
     ],
     form: {
       title: "Lot/Expiry",
@@ -909,9 +1258,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "expiry", label: "Kadaluarsa", type: "date" },
         { name: "quantity", label: "Qty", type: "number" },
         { name: "location", label: "Lokasi" },
-        { name: "status", label: "Status", type: "select", options: ["safe", "warning", "urgent"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["safe", "warning", "urgent"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof inventoryLots[number],
     },
   },
 
@@ -923,7 +1276,12 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "code", header: "Kode" },
       { key: "name", header: "Nama" },
       { key: "type", header: "Tipe" },
-      { key: "rate", header: "Tarif", align: "right", render: (row) => `${Number(row.rate) * 100}%` },
+      {
+        key: "rate",
+        header: "Tarif",
+        align: "right",
+        renderType: "percentage",
+      },
       { key: "inclusive", header: "Inclusive" },
       { key: "status", header: "Status" },
     ],
@@ -931,7 +1289,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "code", label: "Kode" },
       { name: "name", label: "Nama" },
       { name: "type", label: "Tipe" },
-      { name: "rate", label: "Tarif", format: (value) => `${Number(value) * 100}%` },
+      { name: "rate", label: "Tarif", formatType: "percentage" },
       { name: "inclusive", label: "Inclusive" },
       { name: "defaultAccount", label: "Akun Default" },
       { name: "status", label: "Status" },
@@ -939,20 +1297,38 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Kode pajak dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Kode pajak dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Tax Code",
       fields: [
         { name: "code", label: "Kode" },
         { name: "name", label: "Nama" },
-        { name: "type", label: "Tipe", type: "select", options: ["output", "input", "withholding"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["output", "input", "withholding"],
+        },
         { name: "rate", label: "Tarif", type: "number" },
-        { name: "inclusive", label: "Inclusive", type: "select", options: ["true", "false"] },
+        {
+          name: "inclusive",
+          label: "Inclusive",
+          type: "select",
+          options: ["true", "false"],
+        },
         { name: "defaultAccount", label: "Akun Default" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof taxCodes[number],
     },
   },
 
@@ -986,13 +1362,27 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       title: "Penomoran Dokumen",
       fields: [
         { name: "entity", label: "Entitas" },
-        { name: "document", label: "Dokumen", type: "select", options: ["Invoice", "Receipt", "Bill", "Voucher"] },
+        {
+          name: "document",
+          label: "Dokumen",
+          type: "select",
+          options: ["Invoice", "Receipt", "Bill", "Voucher"],
+        },
         { name: "prefix", label: "Prefix" },
         { name: "digits", label: "Digit", type: "number" },
-        { name: "reset", label: "Reset", type: "select", options: ["monthly", "annual", "none"] },
-        { name: "status", label: "Status", type: "select", options: ["locked", "active"] },
+        {
+          name: "reset",
+          label: "Reset",
+          type: "select",
+          options: ["monthly", "annual", "none"],
+        },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["locked", "active"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof docNumbering[number],
     },
   },
 
@@ -1015,7 +1405,11 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Akun dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Akun dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Akun",
@@ -1025,7 +1419,6 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "dk", label: "D/K", type: "select", options: ["D", "K"] },
         { name: "group", label: "Kelompok" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof coa[number],
     },
   },
 
@@ -1038,7 +1431,7 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "type", header: "Tipe" },
       { key: "contact", header: "Kontak" },
       { key: "term", header: "Termin" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "name", label: "Nama" },
@@ -1052,33 +1445,52 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Blacklist", intent: "mock", message: "Pihak diblacklist (mock)." },
+      {
+        label: "Blacklist",
+        intent: "mock",
+        message: "Pihak diblacklist (mock).",
+      },
     ],
     form: {
       title: "Pihak",
       fields: [
         { name: "name", label: "Nama" },
-        { name: "type", label: "Tipe", type: "select", options: ["customer", "vendor"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["customer", "vendor"],
+        },
         { name: "contact", label: "Kontak" },
         { name: "email", label: "Email" },
         { name: "npwp", label: "NPWP" },
-        { name: "term", label: "Termin", type: "select", options: ["COD", "15 Hari", "30 Hari", "45 Hari"] },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "term",
+          label: "Termin",
+          type: "select",
+          options: ["COD", "15 Hari", "30 Hari", "45 Hari"],
+        },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof parties[number],
     },
   },
 
   "masters/banks-channels": {
     title: "Masters • Banks & Payment Channels",
-    description: "Master bank, EDC, e-wallet, beserta mapping fee dan clearing.",
+    description:
+      "Master bank, EDC, e-wallet, beserta mapping fee dan clearing.",
     data: banksChannels,
     columns: [
       { key: "name", header: "Nama" },
       { key: "type", header: "Jenis" },
       { key: "identifier", header: "No/Channel" },
       { key: "currency", header: "Mata Uang" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "name", label: "Nama" },
@@ -1087,27 +1499,50 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { name: "currency", label: "Mata Uang" },
       { name: "branch", label: "Cabang" },
       { name: "settlement", label: "Settlement" },
-      { name: "fee", label: "Fee", format: (value) => typeof value === "number" ? `${(value * 100).toFixed(2)}%` : String(value ?? "") },
+      { name: "fee", label: "Fee", formatType: "percentage" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Channel dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Channel dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Bank/Channel",
       fields: [
         { name: "name", label: "Nama" },
-        { name: "type", label: "Jenis", type: "select", options: ["bank", "edc", "e-wallet", "qris", "payment link"] },
+        {
+          name: "type",
+          label: "Jenis",
+          type: "select",
+          options: ["bank", "edc", "e-wallet", "qris", "payment link"],
+        },
         { name: "identifier", label: "No/Channel" },
-        { name: "currency", label: "Mata Uang", type: "select", options: ["IDR", "USD"] },
+        {
+          name: "currency",
+          label: "Mata Uang",
+          type: "select",
+          options: ["IDR", "USD"],
+        },
         { name: "branch", label: "Cabang" },
-        { name: "settlement", label: "Settlement", type: "select", options: ["H+0", "H+1"] },
+        {
+          name: "settlement",
+          label: "Settlement",
+          type: "select",
+          options: ["H+0", "H+1"],
+        },
         { name: "fee", label: "Fee (%)", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof banksChannels[number],
     },
   },
 
@@ -1119,33 +1554,46 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
       { key: "type", header: "Tipe" },
       { key: "name", header: "Nama" },
       { key: "linkedAccount", header: "Linked Account" },
-      { key: "limit", header: "Limit", align: "right", render: (row) => (row.limit ? currency(row.limit) : "-" ) },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "limit", header: "Limit", align: "right", renderType: "currency" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "type", label: "Tipe" },
       { name: "name", label: "Nama" },
       { name: "linkedAccount", label: "Linked Account" },
-      { name: "limit", label: "Limit", format: currency },
+      { name: "limit", label: "Limit", formatType: "currency" },
       { name: "status", label: "Status" },
       { name: "notes", label: "Catatan" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Setup dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Setup dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Setup Petty",
       fields: [
-        { name: "type", label: "Tipe", type: "select", options: ["box", "category"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["box", "category"],
+        },
         { name: "name", label: "Nama" },
         { name: "linkedAccount", label: "Linked Account" },
         { name: "limit", label: "Limit", type: "number" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
         { name: "notes", label: "Catatan", type: "textarea" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof pettyMaster[number],
     },
   },
 
@@ -1156,14 +1604,19 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     columns: [
       { key: "role", header: "Peran" },
       { key: "description", header: "Deskripsi" },
-      { key: "threshold", header: "Threshold", align: "right", render: (row) => currency(row.threshold) },
+      {
+        key: "threshold",
+        header: "Threshold",
+        align: "right",
+        renderType: "currency",
+      },
       { key: "branch", header: "Cabang" },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "role", label: "Peran" },
       { name: "description", label: "Deskripsi" },
-      { name: "threshold", label: "Threshold", format: currency },
+      { name: "threshold", label: "Threshold", formatType: "currency" },
       { name: "branch", label: "Cabang" },
       { name: "status", label: "Status" },
     ],
@@ -1178,46 +1631,66 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "role", label: "Peran" },
         { name: "description", label: "Deskripsi", type: "textarea" },
         { name: "threshold", label: "Threshold", type: "number" },
-        { name: "branch", label: "Cabang", type: "select", options: ["Semua", "Klinik A", "Klinik B", "Klinik C"] },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "branch",
+          label: "Cabang",
+          type: "select",
+          options: ["Semua", "Klinik A", "Klinik B", "Klinik C"],
+        },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof approvals[number],
     },
   },
 
   "analytics/dimensions": {
     title: "Analytics • Dimensions Setup",
-    description: "Konfigurasi dimensi cabang, gudang, dokter, dsb untuk laporan bersegmen.",
+    description:
+      "Konfigurasi dimensi cabang, gudang, dokter, dsb untuk laporan bersegmen.",
     data: dimensions,
     columns: [
       { key: "dimension", header: "Dimensi" },
       { key: "type", header: "Tipe" },
-      { key: "options", header: "Opsi", render: (row) => Array.isArray(row.options) ? row.options.join(", ") : String(row.options ?? "") },
-      { key: "status", header: "Status", render: (row) => statusBadge(String(row.status ?? "")) },
+      { key: "options", header: "Opsi", renderType: "array" },
+      { key: "status", header: "Status", renderType: "status" },
     ],
     detailFields: [
       { name: "dimension", label: "Dimensi" },
       { name: "type", label: "Tipe" },
-      { name: "options", label: "Opsi", format: (value) => Array.isArray(value) ? value.join(", ") : String(value ?? "") },
+      { name: "options", label: "Opsi", formatType: "array" },
       { name: "status", label: "Status" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
       { label: "Edit", intent: "edit" },
-      { label: "Deactivate", intent: "mock", message: "Dimensi dinonaktifkan (mock)." },
+      {
+        label: "Deactivate",
+        intent: "mock",
+        message: "Dimensi dinonaktifkan (mock).",
+      },
     ],
     form: {
       title: "Dimensi",
       fields: [
         { name: "dimension", label: "Nama Dimensi" },
-        { name: "type", label: "Tipe", type: "select", options: ["single", "multi"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["single", "multi"],
+        },
         { name: "options", label: "Opsi (pisahkan koma)", type: "textarea" },
-        { name: "status", label: "Status", type: "select", options: ["active", "inactive"] },
+        {
+          name: "status",
+          label: "Status",
+          type: "select",
+          options: ["active", "inactive"],
+        },
       ],
-      mapToRow: (values, original) => {
-        const options = typeof values.options === "string" ? values.options.split(",").map((item) => item.trim()).filter(Boolean) : values.options
-        return { ...original, ...values, options } as typeof dimensions[number]
-      },
     },
   },
 
@@ -1228,27 +1701,65 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     columns: [
       { key: "code", header: "Kode" },
       { key: "name", header: "Nama Akun" },
-      { key: "saldoAwalD", header: "Saldo Awal D", align: "right", render: (row) => currency(row.saldoAwalD) },
-      { key: "saldoAwalK", header: "Saldo Awal K", align: "right", render: (row) => currency(row.saldoAwalK) },
-      { key: "lrDebet", header: "L/R Debet", align: "right", render: (row) => currency(row.lrDebet) },
-      { key: "lrKredit", header: "L/R Kredit", align: "right", render: (row) => currency(row.lrKredit) },
-      { key: "neracaDebet", header: "Neraca D", align: "right", render: (row) => currency(row.neracaDebet) },
-      { key: "neracaKredit", header: "Neraca K", align: "right", render: (row) => currency(row.neracaKredit) },
+      {
+        key: "saldoAwalD",
+        header: "Saldo Awal D",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "saldoAwalK",
+        header: "Saldo Awal K",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "lrDebet",
+        header: "L/R Debet",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "lrKredit",
+        header: "L/R Kredit",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "neracaDebet",
+        header: "Neraca D",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "neracaKredit",
+        header: "Neraca K",
+        align: "right",
+        renderType: "currency",
+      },
     ],
     detailFields: [
       { name: "code", label: "Kode" },
       { name: "name", label: "Nama" },
-      { name: "saldoAwalD", label: "Saldo Awal D", format: currency },
-      { name: "saldoAwalK", label: "Saldo Awal K", format: currency },
-      { name: "lrDebet", label: "L/R Debet", format: currency },
-      { name: "lrKredit", label: "L/R Kredit", format: currency },
-      { name: "neracaDebet", label: "Neraca Debet", format: currency },
-      { name: "neracaKredit", label: "Neraca Kredit", format: currency },
+      { name: "saldoAwalD", label: "Saldo Awal D", formatType: "currency" },
+      { name: "saldoAwalK", label: "Saldo Awal K", formatType: "currency" },
+      { name: "lrDebet", label: "L/R Debet", formatType: "currency" },
+      { name: "lrKredit", label: "L/R Kredit", formatType: "currency" },
+      { name: "neracaDebet", label: "Neraca Debet", formatType: "currency" },
+      { name: "neracaKredit", label: "Neraca Kredit", formatType: "currency" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Export", intent: "mock", message: "Neraca lajur diekspor (mock)." },
-      { label: "Print", intent: "mock", message: "Neraca lajur dicetak (mock)." },
+      {
+        label: "Export",
+        intent: "mock",
+        message: "Neraca lajur diekspor (mock).",
+      },
+      {
+        label: "Print",
+        intent: "mock",
+        message: "Neraca lajur dicetak (mock).",
+      },
     ],
     form: {
       title: "Penyesuaian akun",
@@ -1258,7 +1769,6 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "saldoAwalD", label: "Saldo Awal D", type: "number" },
         { name: "saldoAwalK", label: "Saldo Awal K", type: "number" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof trialBalance[number],
     },
   },
 
@@ -1269,18 +1779,27 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     columns: [
       { key: "group", header: "Kelompok" },
       { key: "account", header: "Akun" },
-      { key: "amount", header: "Nilai", align: "right", render: (row) => currency(row.amount) },
+      {
+        key: "amount",
+        header: "Nilai",
+        align: "right",
+        renderType: "currency",
+      },
       { key: "type", header: "Tipe" },
     ],
     detailFields: [
       { name: "group", label: "Kelompok" },
       { name: "account", label: "Akun" },
-      { name: "amount", label: "Nilai", format: currency },
+      { name: "amount", label: "Nilai", formatType: "currency" },
       { name: "type", label: "Tipe" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Export", intent: "mock", message: "Laporan P&L diekspor (mock)." },
+      {
+        label: "Export",
+        intent: "mock",
+        message: "Laporan P&L diekspor (mock).",
+      },
     ],
     form: {
       title: "Penyesuaian P&L",
@@ -1288,9 +1807,13 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "group", label: "Kelompok" },
         { name: "account", label: "Akun" },
         { name: "amount", label: "Nilai", type: "number" },
-        { name: "type", label: "Tipe", type: "select", options: ["revenue", "expense", "other-revenue", "other-expense"] },
+        {
+          name: "type",
+          label: "Tipe",
+          type: "select",
+          options: ["revenue", "expense", "other-revenue", "other-expense"],
+        },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as typeof profitLoss[number],
     },
   },
 
@@ -1300,22 +1823,46 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     data: buildRetainedEarningsRows(),
     columns: [
       { key: "period", header: "Periode" },
-      { key: "openingBalance", header: "Saldo Awal", align: "right", render: (row) => currency(row.openingBalance) },
-      { key: "currentProfit", header: "Laba Periode", align: "right", render: (row) => currency(row.currentProfit) },
-      { key: "dividend", header: "Dividen", align: "right", render: (row) => currency(row.dividend) },
-      { key: "closingBalance", header: "Saldo Akhir", align: "right", render: (row) => currency(row.closingBalance) },
+      {
+        key: "openingBalance",
+        header: "Saldo Awal",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "currentProfit",
+        header: "Laba Periode",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "dividend",
+        header: "Dividen",
+        align: "right",
+        renderType: "currency",
+      },
+      {
+        key: "closingBalance",
+        header: "Saldo Akhir",
+        align: "right",
+        renderType: "currency",
+      },
     ],
     detailFields: [
       { name: "period", label: "Periode" },
-      { name: "openingBalance", label: "Saldo Awal", format: currency },
-      { name: "currentProfit", label: "Laba Periode", format: currency },
-      { name: "dividend", label: "Dividen", format: currency },
-      { name: "adjustments", label: "Penyesuaian", format: (value) => Array.isArray(value) ? value.map((item) => `${item.description}: ${currency(item.amount)}`).join("; ") : String(value ?? "") },
-      { name: "closingBalance", label: "Saldo Akhir", format: currency },
+      { name: "openingBalance", label: "Saldo Awal", formatType: "currency" },
+      { name: "currentProfit", label: "Laba Periode", formatType: "currency" },
+      { name: "dividend", label: "Dividen", formatType: "currency" },
+      { name: "adjustments", label: "Penyesuaian", formatType: "array" },
+      { name: "closingBalance", label: "Saldo Akhir", formatType: "currency" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Export", intent: "mock", message: "Laporan laba ditahan diekspor (mock)." },
+      {
+        label: "Export",
+        intent: "mock",
+        message: "Laporan laba ditahan diekspor (mock).",
+      },
     ],
     form: {
       title: "Penyesuaian Laba Ditahan",
@@ -1324,27 +1871,36 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
         { name: "currentProfit", label: "Laba Periode", type: "number" },
         { name: "dividend", label: "Dividen", type: "number" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as Record<string, unknown>,
     },
   },
 
   "reports/balance-sheet": {
     title: "Reports • Balance Sheet",
     description: "Neraca keuangan berdasarkan struktur aktiva dan kewajiban.",
-    data: balanceSheet.assets.map((asset) => ({ ...asset, section: "Assets" })).concat(
-      balanceSheet.liabilities.map((liab) => ({ ...liab, section: "Liabilities" })),
-      balanceSheet.equity.map((eq) => ({ ...eq, section: "Equity" })),
-    ),
+    data: balanceSheet.assets
+      .map((asset) => ({ ...asset, section: "Assets" }))
+      .concat(
+        balanceSheet.liabilities.map((liab) => ({
+          ...liab,
+          section: "Liabilities",
+        })),
+        balanceSheet.equity.map((eq) => ({ ...eq, section: "Equity" }))
+      ),
     columns: [
       { key: "section", header: "Bagian" },
       { key: "account", header: "Akun" },
-      { key: "amount", header: "Nilai", align: "right", render: (row) => currency(row.amount) },
+      {
+        key: "amount",
+        header: "Nilai",
+        align: "right",
+        renderType: "currency",
+      },
     ],
     detailFields: [
       { name: "section", label: "Bagian" },
       { name: "group", label: "Kelompok" },
       { name: "account", label: "Akun" },
-      { name: "amount", label: "Nilai", format: currency },
+      { name: "amount", label: "Nilai", formatType: "currency" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
@@ -1353,104 +1909,151 @@ const moduleConfigs: Record<string, ModuleConfig<Record<string, unknown>>> = {
     form: {
       title: "Penyesuaian Neraca",
       fields: [
-        { name: "section", label: "Bagian", type: "select", options: ["Assets", "Liabilities", "Equity"] },
+        {
+          name: "section",
+          label: "Bagian",
+          type: "select",
+          options: ["Assets", "Liabilities", "Equity"],
+        },
         { name: "account", label: "Akun" },
         { name: "amount", label: "Nilai", type: "number" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as Record<string, unknown>,
     },
   },
 
   "reports/cashflow-direct": {
     title: "Reports • Cashflow Direct",
-    description: "Arus kas metode langsung dari aktivitas operasi, investasi, dan pendanaan.",
+    description:
+      "Arus kas metode langsung dari aktivitas operasi, investasi, dan pendanaan.",
     data: cashflowDirect.flatMap((section) =>
-      section.items.map((item) => ({ section: section.section, label: item.label, amount: item.amount }))
+      section.items.map((item) => ({
+        section: section.section,
+        label: item.label,
+        amount: item.amount,
+      }))
     ),
     columns: [
       { key: "section", header: "Bagian" },
       { key: "label", header: "Kegiatan" },
-      { key: "amount", header: "Nilai", align: "right", render: (row) => currency(row.amount) },
+      {
+        key: "amount",
+        header: "Nilai",
+        align: "right",
+        renderType: "currency",
+      },
     ],
     detailFields: [
       { name: "section", label: "Bagian" },
       { name: "label", label: "Kegiatan" },
-      { name: "amount", label: "Nilai", format: currency },
+      { name: "amount", label: "Nilai", formatType: "currency" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Export", intent: "mock", message: "Arus kas direct diekspor (mock)." },
+      {
+        label: "Export",
+        intent: "mock",
+        message: "Arus kas direct diekspor (mock).",
+      },
     ],
     form: {
       title: "Penyesuaian Cashflow",
       fields: [
-        { name: "section", label: "Bagian", type: "select", options: cashflowDirect.map((section) => section.section) },
+        {
+          name: "section",
+          label: "Bagian",
+          type: "select",
+          options: cashflowDirect.map((section) => section.section),
+        },
         { name: "label", label: "Kegiatan" },
         { name: "amount", label: "Nilai", type: "number" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as Record<string, unknown>,
     },
   },
 
   "reports/cashflow-indirect": {
     title: "Reports • Cashflow Indirect",
-    description: "Arus kas metode tidak langsung berdasarkan laba bersih dan penyesuaian.",
+    description:
+      "Arus kas metode tidak langsung berdasarkan laba bersih dan penyesuaian.",
     data: cashflowIndirect.flatMap((section) =>
-      section.items.map((item) => ({ section: section.section, label: item.label, amount: item.amount }))
+      section.items.map((item) => ({
+        section: section.section,
+        label: item.label,
+        amount: item.amount,
+      }))
     ),
     columns: [
       { key: "section", header: "Bagian" },
       { key: "label", header: "Penyesuaian" },
-      { key: "amount", header: "Nilai", align: "right", render: (row) => currency(row.amount) },
+      {
+        key: "amount",
+        header: "Nilai",
+        align: "right",
+        renderType: "currency",
+      },
     ],
     detailFields: [
       { name: "section", label: "Bagian" },
       { name: "label", label: "Penyesuaian" },
-      { name: "amount", label: "Nilai", format: currency },
+      { name: "amount", label: "Nilai", formatType: "currency" },
     ],
     rowActions: [
       { label: "View", intent: "view" },
-      { label: "Export", intent: "mock", message: "Arus kas indirect diekspor (mock)." },
+      {
+        label: "Export",
+        intent: "mock",
+        message: "Arus kas indirect diekspor (mock).",
+      },
     ],
     form: {
       title: "Penyesuaian Cashflow Indirect",
       fields: [
-        { name: "section", label: "Bagian", type: "select", options: cashflowIndirect.map((section) => section.section) },
+        {
+          name: "section",
+          label: "Bagian",
+          type: "select",
+          options: cashflowIndirect.map((section) => section.section),
+        },
         { name: "label", label: "Penyesuaian" },
         { name: "amount", label: "Nilai", type: "number" },
       ],
-      mapToRow: (values, original) => ({ ...original, ...values }) as Record<string, unknown>,
     },
   },
-}
+};
 
-export type DashboardData = typeof dashboard
+export type DashboardData = typeof dashboard;
 
 export function getModuleConfig(path: string) {
-  return moduleConfigs[path]
+  return moduleConfigs[path];
 }
 
 export function getDashboardData() {
-  return dashboard
+  return dashboard;
 }
 
 function buildRetainedEarningsRows() {
-  const base = retainedEarnings
+  const base = retainedEarnings;
   const periods = [
     { period: "2024", profit: base.currentProfit * 0.9, adj: -250000 },
     { period: "2025", profit: base.currentProfit, adj: 300000 },
     { period: "2026", profit: base.currentProfit * 1.1, adj: -150000 },
     { period: "2027", profit: base.currentProfit * 1.2, adj: 200000 },
     { period: "2028", profit: base.currentProfit * 0.95, adj: 0 },
-  ]
+  ];
 
   return periods.map((item, index) => {
-    const opening = base.openingBalance + index * 1_500_000
-    const dividend = base.dividend
-    const adjustments = (base.adjustments ?? []).map((adj) => ({ ...adj }))
-    adjustments.push({ description: `Penyesuaian tambahan ${item.period}`, amount: item.adj })
+    const opening = base.openingBalance + index * 1_500_000;
+    const dividend = base.dividend;
+    const adjustments = (base.adjustments ?? []).map((adj) => ({ ...adj }));
+    adjustments.push({
+      description: `Penyesuaian tambahan ${item.period}`,
+      amount: item.adj,
+    });
 
-    const closing = opening + item.profit - dividend + adjustments.reduce((sum, adj) => sum + Number(adj.amount ?? 0), 0)
+    const closing =
+      opening +
+      item.profit -
+      dividend +
+      adjustments.reduce((sum, adj) => sum + Number(adj.amount ?? 0), 0);
 
     return {
       period: item.period,
@@ -1459,6 +2062,6 @@ function buildRetainedEarningsRows() {
       dividend,
       adjustments,
       closingBalance: Math.round(closing),
-    }
-  })
+    };
+  });
 }

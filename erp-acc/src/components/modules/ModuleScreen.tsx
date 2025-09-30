@@ -26,10 +26,18 @@ export type FieldConfig = {
   defaultValue?: string | number
 }
 
+// Serializable column config
+export type SerializableColumn<T extends Record<string, unknown>> = {
+  key: keyof T | string
+  header: string
+  align?: "left" | "center" | "right"
+  renderType?: "currency" | "status" | "percentage" | "array"
+}
+
 export type DetailField<T extends Record<string, unknown>> = {
   name: keyof T
   label: string
-  format?: (value: T[keyof T]) => React.ReactNode
+  formatType?: "currency" | "percentage" | "array"
 }
 
 export type RowAction = {
@@ -45,13 +53,12 @@ export type ModuleConfig<T extends Record<string, unknown>> = {
   title: string
   description?: string
   data: T[]
-  columns: Column<T>[]
+  columns: SerializableColumn<T>[]
   detailFields: DetailField<T>[]
   form: {
     title: string
     fields: FieldConfig[]
-    mapToRow: (values: FormValues, original?: T | null) => T
-    validate?: (values: FormValues) => string | null
+    validateType?: "balanceDebitCredit"
   }
   rowActions: RowAction[]
   periodOptions?: string[]
@@ -70,6 +77,30 @@ export function ModuleScreen<T extends Record<string, unknown>>({ config }: { co
   const [activeRow, setActiveRow] = React.useState<T | null>(null)
   const [formValues, setFormValues] = React.useState<FormValues>(() => buildInitialValues(config.form.fields))
 
+  // Convert serializable columns to renderable columns
+  const columns: Column<T>[] = React.useMemo(() => 
+    config.columns.map(col => ({
+      key: col.key,
+      header: col.header,
+      align: col.align,
+      render: col.renderType ? (row: T) => {
+        const value = row[col.key as keyof T]
+        switch (col.renderType) {
+          case "currency":
+            return currency(value)
+          case "status":
+            return statusBadge(String(value ?? ""))
+          case "percentage":
+            return `${Number(value) * 100}%`
+          case "array":
+            return Array.isArray(value) ? value.join(", ") : String(value ?? "")
+          default:
+            return value as React.ReactNode
+        }
+      } : undefined
+    })),
+  [config.columns])
+
   const filteredRows = React.useMemo(() => {
     if (!search) return rows
     const term = search.toLowerCase()
@@ -86,12 +117,18 @@ export function ModuleScreen<T extends Record<string, unknown>>({ config }: { co
   }
 
   const handleSubmit = () => {
-    const error = config.form.validate?.(formValues)
-    if (error) {
-      toast({ title: "Validasi", description: error, variant: "destructive" })
-      return
+    // Validate based on validateType
+    if (config.form.validateType === "balanceDebitCredit") {
+      const debit = Number(formValues.debit ?? 0)
+      const credit = Number(formValues.credit ?? 0)
+      if (debit !== credit) {
+        toast({ title: "Validasi", description: "Debit dan kredit harus seimbang.", variant: "destructive" })
+        return
+      }
     }
-    const mapped = config.form.mapToRow(formValues, activeRow)
+    
+    // Map form values to row (simple merge)
+    const mapped = { ...activeRow, ...formValues } as T
     setRows((prev) => {
       if (mode === "edit" && activeRow) {
         return prev.map((row) => (row === activeRow ? mapped : row))
@@ -146,7 +183,7 @@ export function ModuleScreen<T extends Record<string, unknown>>({ config }: { co
       <div className="rounded-xl border bg-card p-4 shadow-sm">
         <DataTable
           data={filteredRows}
-          columns={[...config.columns, buildActionColumn(config.rowActions, handleAction)]}
+          columns={[...columns, buildActionColumn(config.rowActions, handleAction)]}
         />
       </div>
 
@@ -164,8 +201,8 @@ export function ModuleScreen<T extends Record<string, unknown>>({ config }: { co
                   {field.label}
                 </span>
                 <span className="text-sm">
-                  {field.format
-                    ? field.format(activeRow[field.name])
+                  {field.formatType
+                    ? formatByType(activeRow[field.name], field.formatType)
                     : formatValue(activeRow[field.name])}
                 </span>
               </div>
@@ -239,6 +276,30 @@ function buildValuesFromRow<T extends Record<string, unknown>>(fields: FieldConf
     acc[field.name] = row[field.name as keyof T] ?? ""
     return acc
   }, {})
+}
+
+const currency = (value: unknown) =>
+  typeof value === "number"
+    ? value.toLocaleString("id-ID", { minimumFractionDigits: 0 })
+    : String(value ?? "")
+
+function formatByType(value: unknown, formatType: "currency" | "percentage" | "array"): React.ReactNode {
+  switch (formatType) {
+    case "currency":
+      return currency(value)
+    case "percentage":
+      return `${Number(value) * 100}%`
+    case "array":
+      if (Array.isArray(value)) {
+        if (value.length > 0 && typeof value[0] === "object" && value[0] !== null && "description" in value[0]) {
+          return value.map((item: { description?: string; amount?: number }) => `${item.description}: ${currency(item.amount)}`).join("; ")
+        }
+        return value.join(", ")
+      }
+      return String(value ?? "")
+    default:
+      return value as React.ReactNode
+  }
 }
 
 function formatValue(value: unknown) {
